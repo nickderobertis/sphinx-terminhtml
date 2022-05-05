@@ -2,15 +2,13 @@ from hashlib import md5
 from pathlib import Path
 from typing import Sequence, List, Optional
 
+import appdirs
 from pydantic import BaseModel
 
 from .options import RunTerminalOptions
 
 
-SOURCE_DIR = Path(__file__).parent.parent.parent / "source"
-CACHE_DIR = SOURCE_DIR / "cache"
-TERMINAL_CACHE_DIR = CACHE_DIR / "terminal"
-
+TERMINAL_CACHE_DIR = Path(appdirs.user_cache_dir("sphinx-terminhtml"))
 TERMINAL_CACHE_DIR.mkdir(exist_ok=True, parents=True)
 
 

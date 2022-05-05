@@ -64,6 +64,7 @@ PACKAGE_INSTALL_REQUIRES = [
     # 'otherpackage>=1,<2'
     "terminhtml",
     "requests",
+    "appdirs",
 ]
 
 # Add any third party packages you use in requirements for optional features of your package here
