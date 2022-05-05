@@ -1,4 +1,4 @@
-[![](https://codecov.io/gh/nickderobertis/sphinx-terminhtml/branch/master/graph/badge.svg)](https://codecov.io/gh/nickderobertis/sphinx-terminhtml)
+[![](https://codecov.io/gh/nickderobertis/sphinx-terminhtml/branch/main/graph/badge.svg)](https://codecov.io/gh/nickderobertis/sphinx-terminhtml)
 [![PyPI](https://img.shields.io/pypi/v/sphinx-terminhtml)](https://pypi.org/project/sphinx-terminhtml/)
 ![PyPI - License](https://img.shields.io/pypi/l/sphinx-terminhtml)
 [![Documentation](https://img.shields.io/badge/documentation-pass-green)](https://nickderobertis.github.io/sphinx-terminhtml/)
