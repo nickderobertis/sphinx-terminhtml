@@ -34,7 +34,7 @@ class CacheInputs(BaseModel):
 
 
 class CacheOutput(BaseModel):
-    content: List[str]
+    content: str
     input: CacheInputs
 
     @property
@@ -57,17 +57,17 @@ class TerminalCache:
         else:
             log.info(f"Cache hit for terminal directive: {inputs}. Loading from {path}")
 
-        out_content = path.read_bytes().decode().split("\n")
+        out_content = path.read_text()
         return CacheOutput(content=out_content, input=inputs)
 
     def set(
         self,
         directive_content: Sequence[str],
         options: RunTerminalOptions,
-        output_content: Sequence[str],
+        output_content: str,
     ) -> CacheOutput:
         inputs = CacheInputs(content=directive_content, options=options)
-        output = CacheOutput(content=list(output_content), input=inputs)
+        output = CacheOutput(content=output_content, input=inputs)
         path = self.cache_dir / output.file_name
-        path.write_bytes("\n".join(output.content).encode())
+        path.write_text(output.content)
         return output

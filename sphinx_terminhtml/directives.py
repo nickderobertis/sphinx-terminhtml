@@ -44,6 +44,10 @@ class TerminHTMLDirective(SphinxDirective):
         text = self._run_commands_in_temp_dir_generate_output_html()
         return [html(text)]
 
+    @property
+    def commands(self) -> List[str]:
+        return list(self.content)
+
     def _run_commands_in_temp_dir_generate_output_html(self) -> str:
         self.options: RunTerminalOptions
 
@@ -61,24 +65,46 @@ class TerminHTMLDirective(SphinxDirective):
 
         input: List[str] = self.options.get("input", [])
         allow_exceptions: bool = "allow-exceptions" in self.options
-        terminhtml = TerminHTML.from_commands(
-            list(self.content),
+        return self._load_cache_or_run_commands_in_temp_dir_get_output_list(
             use_setup_commands,
             input=input,
             allow_exceptions=allow_exceptions,
             prompt_matchers=use_prompt_matchers,
         )
-        return terminhtml.to_html(full=False)
 
-    def _load_cache_or_run_commands_in_temp_dir_get_output_list(self) -> List[str]:
+    def _load_cache_or_run_commands_in_temp_dir_get_output_list(
+        self,
+        setup_commands: List[str],
+        input: List[str],
+        allow_exceptions: bool,
+        prompt_matchers: List[str],
+    ) -> str:
         self.content: StringList
         cached_result = cache.get(list(self.content), self.options)
         if cached_result:
             return cached_result.content
 
-        result = self._run_commands_in_temp_dir_generate_output_list()
-        cache.set(list(self.content), self.options, result)
+        result = self._run_commands_in_temp_dir_generate_html(
+            setup_commands, input, allow_exceptions, prompt_matchers
+        )
+        cache.set(self.commands, self.options, result)
         return result
+
+    def _run_commands_in_temp_dir_generate_html(
+        self,
+        setup_commands: List[str],
+        input: List[str],
+        allow_exceptions: bool,
+        prompt_matchers: List[str],
+    ) -> str:
+        terminhtml = TerminHTML.from_commands(
+            self.commands,
+            setup_commands,
+            input=input,
+            allow_exceptions=allow_exceptions,
+            prompt_matchers=prompt_matchers,
+        )
+        return terminhtml.to_html(full=False)
 
 
 def create_terminhtml_directive_with_setup(
