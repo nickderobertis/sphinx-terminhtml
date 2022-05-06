@@ -7,7 +7,7 @@ from sphinx.application import Sphinx
 from sphinx.util.fileutil import copy_asset
 from terminhtml.main import TerminHTML, CommandResults
 
-js_file_url = "https://unpkg.com/@terminhtml/bootstrap@1.0.0-alpha.9/dist/@terminhtml-bootstrap.umd.js"
+js_file_url = "https://unpkg.com/@terminhtml/bootstrap@1.0.0-alpha.10/dist/@terminhtml-bootstrap.umd.js"
 js_file_name = "@terminhtml-bootstrap.umd.js"
 css_file_name = "ansi2html.css"
 

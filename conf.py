@@ -62,7 +62,7 @@ PACKAGE_INSTALL_REQUIRES = [
     # e.g.
     # 'package',
     # 'otherpackage>=1,<2'
-    "terminhtml",
+    "terminhtml>=0.2.4",
     "requests",
     "appdirs",
 ]
