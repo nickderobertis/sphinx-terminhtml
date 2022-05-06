@@ -6,7 +6,7 @@ RunTerminalOptions = TypedDict(
     {
         "setup": str,
         "input": List[Optional[str]],
-        "prompt-matchers": List[Optional[str]],
+        "prompt-matchers": Optional[List[str]],
         "allow-exceptions": Optional[bool],
     },
     total=False,

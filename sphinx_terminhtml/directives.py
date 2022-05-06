@@ -57,13 +57,13 @@ class TerminHTMLDirective(SphinxDirective):
         else:
             use_setup_commands = self.always_setup_commands
 
-        prompt_matchers: List[str] = self.options.get("prompt-matchers", [])
+        prompt_matchers: List[str] = self.options.get("prompt-matchers", []) or []
         if prompt_matchers:
             use_prompt_matchers = self.always_prompt_matchers + prompt_matchers
         else:
             use_prompt_matchers = self.always_prompt_matchers
 
-        input: List[str] = self.options.get("input", [])
+        input: List[Optional[str]] = self.options.get("input", [])
         allow_exceptions: bool = "allow-exceptions" in self.options
         return self._load_cache_or_run_commands_in_temp_dir_get_output_list(
             use_setup_commands,
@@ -75,7 +75,7 @@ class TerminHTMLDirective(SphinxDirective):
     def _load_cache_or_run_commands_in_temp_dir_get_output_list(
         self,
         setup_commands: List[str],
-        input: List[str],
+        input: List[Optional[str]],
         allow_exceptions: bool,
         prompt_matchers: List[str],
     ) -> str:
@@ -93,7 +93,7 @@ class TerminHTMLDirective(SphinxDirective):
     def _run_commands_in_temp_dir_generate_html(
         self,
         setup_commands: List[str],
-        input: List[str],
+        input: List[Optional[str]],
         allow_exceptions: bool,
         prompt_matchers: List[str],
     ) -> str:
