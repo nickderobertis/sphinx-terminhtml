@@ -1,0 +1,75 @@
+sphinx\_terminhtml package
+==========================
+
+.. automodule:: sphinx_terminhtml
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+sphinx\_terminhtml.assets module
+--------------------------------
+
+.. automodule:: sphinx_terminhtml.assets
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+sphinx\_terminhtml.cache module
+-------------------------------
+
+.. automodule:: sphinx_terminhtml.cache
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+sphinx\_terminhtml.directives module
+------------------------------------
+
+.. automodule:: sphinx_terminhtml.directives
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+sphinx\_terminhtml.get\_version module
+--------------------------------------
+
+.. automodule:: sphinx_terminhtml.get_version
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+sphinx\_terminhtml.logger module
+--------------------------------
+
+.. automodule:: sphinx_terminhtml.logger
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+sphinx\_terminhtml.options module
+---------------------------------
+
+.. automodule:: sphinx_terminhtml.options
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+sphinx\_terminhtml.sphinx\_setup module
+---------------------------------------
+
+.. automodule:: sphinx_terminhtml.sphinx_setup
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+sphinx\_terminhtml.wipe\_cache module
+-------------------------------------
+
+.. automodule:: sphinx_terminhtml.wipe_cache
+   :members:
+   :undoc-members:
+   :show-inheritance:
+

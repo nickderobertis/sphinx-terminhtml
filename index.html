@@ -1,0 +1,525 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="lang:clipboard.copy" content="Copy to clipboard">
+  <meta name="lang:clipboard.copied" content="Copied to clipboard">
+  <meta name="lang:search.language" content="en">
+  <meta name="lang:search.pipeline.stopwords" content="True">
+  <meta name="lang:search.pipeline.trimmer" content="True">
+  <meta name="lang:search.result.none" content="No matching documents">
+  <meta name="lang:search.result.one" content="1 matching document">
+  <meta name="lang:search.result.other" content="# matching documents">
+  <meta name="lang:search.tokenizer" content="[\s\-]+">
+
+  
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto:300,400,400i,700&display=fallback" rel="stylesheet">
+
+    <style>
+      body,
+      input {
+        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif
+      }
+
+      code,
+      kbd,
+      pre {
+        font-family: "Roboto Mono", "Courier New", Courier, monospace
+      }
+    </style>
+  
+
+  <link rel="stylesheet" href="_static/stylesheets/application.css"/>
+  <link rel="stylesheet" href="_static/stylesheets/application-palette.css"/>
+  <link rel="stylesheet" href="_static/stylesheets/application-fixes.css"/>
+  
+  <link rel="stylesheet" href="_static/fonts/material-icons.css"/>
+  
+  <meta name="theme-color" content="#3f51b5">
+  <script src="_static/javascripts/modernizr.js"></script>
+  
+  
+  
+    <title>Welcome to Sphinx TerminHTML documentation! &#8212; sphinx-terminhtml 0.1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/material.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/ansi2html.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx_paramlinks.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sg_gallery.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sg_gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sg_gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sg_gallery-rendered-html.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/@terminhtml-bootstrap.umd.js"></script>
+    <link rel="canonical" href="https://nickderobertis.github.io/sphinx-terminhtml/index.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Getting started with sphinx-terminhtml" href="tutorial.html" />
+  
+   
+
+  </head>
+  <body dir=ltr
+        data-md-color-primary=indigo data-md-color-accent=deep-purple>
+  
+  <svg class="md-svg">
+    <defs data-children-count="0">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+      
+    </defs>
+  </svg>
+  
+  <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer">
+  <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search">
+  <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+  <a href="#index" tabindex="1" class="md-skip"> Skip to content </a>
+  <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex navheader">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="#" title="sphinx-terminhtml 0.1.0 documentation"
+           class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">&#xe869</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          <span class="md-header-nav__topic">sphinx-terminhtml</span>
+          <span class="md-header-nav__topic"> Welcome to Sphinx TerminHTML documentation! </span>
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+        
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" action="search.html" method="get" name="search">
+      <input type="text" class="md-search__input" name="q" placeholder="Search"
+             autocapitalize="off" autocomplete="off" spellcheck="false"
+             data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            <a href="https://github.com/nickderobertis/sphinx-terminhtml" title="Go to repository" class="md-source" data-md-source="github">
+
+    <div class="md-source__icon">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" width="28" height="28">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    sphinx-terminhtml
+  </div>
+</a>
+          </div>
+        </div>
+      
+      
+  
+  <script src="_static/javascripts/version_dropdown.js"></script>
+  <script>
+    var json_loc = ""versions.json"",
+        target_loc = "../",
+        text = "Versions";
+    $( document ).ready( add_version_dropdown(json_loc, target_loc, text));
+  </script>
+  
+
+    </div>
+  </nav>
+</header>
+
+  
+  <div class="md-container">
+    
+    
+    
+  <nav class="md-tabs" data-md-component="tabs">
+    <div class="md-tabs__inner md-grid">
+      <ul class="md-tabs__list">
+          <li class="md-tabs__item"><a href="#" class="md-tabs__link">sphinx-terminhtml 0.1.0 documentation</a></li>
+      </ul>
+    </div>
+  </nav>
+    <main class="md-main">
+      <div class="md-main__inner md-grid" data-md-component="container">
+        
+          <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="#" title="sphinx-terminhtml 0.1.0 documentation" class="md-nav__button md-logo">
+      
+        <i class="md-icon">&#xe869</i>
+      
+    </a>
+    <a href="#"
+       title="sphinx-terminhtml 0.1.0 documentation">sphinx-terminhtml</a>
+  </label>
+    <div class="md-nav__source">
+      <a href="https://github.com/nickderobertis/sphinx-terminhtml" title="Go to repository" class="md-source" data-md-source="github">
+
+    <div class="md-source__icon">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" width="28" height="28">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    sphinx-terminhtml
+  </div>
+</a>
+    </div>
+  
+  
+
+  
+  <ul class="md-nav__list">
+    <li class="md-nav__item">
+    
+    
+      <a href="tutorial.html" class="md-nav__link">Getting started with sphinx-terminhtml</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="auto_examples/index.html" class="md-nav__link">This is my gallery</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="api/modules.html" class="md-nav__link">sphinx_terminhtml</a>
+      
+    
+    </li>
+  </ul>
+  
+
+</nav>
+              </div>
+            </div>
+          </div>
+          <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                
+<nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">Contents</label>
+  <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#index--page-root" class="md-nav__link">Welcome to Sphinx TerminHTML documentation!</a>
+        </li>
+        <li class="md-nav__item"><a href="#sphinx-terminhtml" class="md-nav__link">sphinx-terminhtml</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#overview" class="md-nav__link">Overview</a>
+        </li>
+        <li class="md-nav__item"><a href="#getting-started" class="md-nav__link">Getting Started</a>
+        </li>
+        <li class="md-nav__item"><a href="#development-status" class="md-nav__link">Development Status</a>
+        </li>
+        <li class="md-nav__item"><a href="#author" class="md-nav__link">Author</a>
+        </li>
+        <li class="md-nav__item"><a href="#links" class="md-nav__link">Links</a>
+        </li>
+        <li class="md-nav__item"><a href="#tutorial-and-examples" class="md-nav__link">Tutorial and Examples</a>
+        </li>
+        <li class="md-nav__item"><a href="#api-documentation" class="md-nav__link">API Documentation</a>
+        </li>
+        <li class="md-nav__item"><a href="#indices" class="md-nav__link">Indices</a>
+        </li></ul>
+            </nav>
+        </li>
+    
+<li class="md-nav__item"><a class="md-nav__extra_link" href="_sources/index.md.txt">Show Source</a> </li>
+
+<li id="searchbox" class="md-nav__item"></li>
+
+  </ul>
+</nav>
+              </div>
+            </div>
+          </div>
+        
+        <div class="md-content">
+          <article class="md-content__inner md-typeset" role="main">
+            
+  <section id="welcome-to-sphinx-terminhtml-documentation">
+<h1 id="index--page-root">Welcome to Sphinx TerminHTML documentation!<a class="headerlink" href="#index--page-root" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://codecov.io/gh/nickderobertis/sphinx-terminhtml"><img alt="" src="https://codecov.io/gh/nickderobertis/sphinx-terminhtml/branch/main/graph/badge.svg"/></a>
+<a class="reference external" href="https://pypi.org/project/sphinx-terminhtml/"><img alt="PyPI" src="https://img.shields.io/pypi/v/sphinx-terminhtml"/></a>
+<img alt="PyPI - License" src="https://img.shields.io/pypi/l/sphinx-terminhtml"/>
+<a class="reference external" href="https://nickderobertis.github.io/sphinx-terminhtml/"><img alt="Documentation" src="https://img.shields.io/badge/documentation-pass-green"/></a>
+<a class="reference external" href="https://github.com/nickderobertis/sphinx-terminhtml/"><img alt="Github Repo" src="https://img.shields.io/badge/repo-github-informational"/></a></p>
+</section>
+<section id="sphinx-terminhtml">
+<h1 id="sphinx-terminhtml">sphinx-terminhtml<a class="headerlink" href="#sphinx-terminhtml" title="Permalink to this headline">¶</a></h1>
+<section id="overview">
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Write bash commands in a Sphinx directive, output an animated HTML/CSS terminal</p>
+</section>
+<section id="getting-started">
+<h2 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<p>Install <code class="docutils literal notranslate"><span class="pre">sphinx-terminhtml</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">sphinx</span><span class="o">-</span><span class="n">terminhtml</span>
+</pre></div>
+</div>
+<p>A simple example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sphinx_terminhtml</span>
+
+<span class="c1"># Do something with sphinx_terminhtml</span>
+</pre></div>
+</div>
+<p>See a
+<a class="reference external" href="https://nickderobertis.github.io/sphinx-terminhtml/tutorial.html">more in-depth tutorial here.</a></p>
+</section>
+<section id="development-status">
+<h2 id="development-status">Development Status<a class="headerlink" href="#development-status" title="Permalink to this headline">¶</a></h2>
+<p>This project is currently in early-stage development. There may be
+breaking changes often. While the major version is 0, minor version
+upgrades will often have breaking changes.</p>
+</section>
+<section id="author">
+<h2 id="author">Author<a class="headerlink" href="#author" title="Permalink to this headline">¶</a></h2>
+<p>Created by Nick DeRobertis. MIT License.</p>
+</section>
+<section id="links">
+<h2 id="links">Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<p>See the
+<a class="reference external" href="https://nickderobertis.github.io/sphinx-terminhtml/">documentation here.</a></p>
+<pre class="terminhtml">
+    <span data-ty="" data-ty-delay="393">$ python -m rich</span>
+<span data-ty="" data-ty-delay="0"><span class="ansi3">                                 Rich features                                  </span></span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>                                                                  </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31"> </span><span class="ansi1 ansi31">   Colors   </span><span class="ansi1 ansi31"> </span>✓ <span class="ansi1 ansi32">4-bit color</span>                 <span class="ansi30 ansi40">▄</span><span class="ansi30 ansi40">▄</span><span class="ansi30 ansi40">▄</span><span class="ansi30 ansi40">▄</span><span class="ansi33 ansi40">▄</span><span class="ansi33 ansi40">▄</span><span class="ansi33 ansi40">▄</span><span class="ansi90 ansi40">▄</span><span class="ansi90 ansi40">▄</span><span class="ansi90 ansi40">▄</span><span class="ansi90 ansi40">▄</span><span class="ansi32 ansi40">▄</span><span class="ansi32 ansi40">▄</span><span class="ansi90 ansi40">▄</span><span class="ansi90 ansi40">▄</span><span class="ansi90 ansi40">▄</span><span class="ansi90 ansi40">▄</span><span class="ansi90 ansi40">▄</span><span class="ansi90 ansi40">▄</span><span class="ansi90 ansi40">▄</span><span class="ansi90 ansi40">▄</span><span class="ansi34 ansi40">▄</span><span class="ansi34 ansi40">▄</span><span class="ansi34 ansi40">▄</span><span class="ansi34 ansi40">▄</span><span class="ansi34 ansi40">▄</span><span class="ansi34 ansi40">▄</span><span class="ansi34 ansi40">▄</span><span class="ansi90 ansi40">▄</span><span class="ansi90 ansi40">▄</span><span class="ansi90 ansi40">▄</span><span class="ansi30 ansi40">▄</span><span class="ansi30 ansi40">▄</span><span class="ansi30 ansi40">▄</span><span class="ansi30 ansi40">▄</span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>✓ <span class="ansi1 ansi34">8-bit color</span>                 <span class="ansi31 ansi41">▄</span><span class="ansi31 ansi41">▄</span><span class="ansi33 ansi41">▄</span><span class="ansi33 ansi43">▄</span><span class="ansi33 ansi43">▄</span><span class="ansi33 ansi43">▄</span><span class="ansi33 ansi43">▄</span><span class="ansi33 ansi43">▄</span><span class="ansi32 ansi42">▄</span><span class="ansi32 ansi42">▄</span><span class="ansi32 ansi42">▄</span><span class="ansi32 ansi42">▄</span><span class="ansi32 ansi42">▄</span><span class="ansi32 ansi42">▄</span><span class="ansi32 ansi42">▄</span><span class="ansi36 ansi100">▄</span><span class="ansi36 ansi100">▄</span><span class="ansi36 ansi46">▄</span><span class="ansi36 ansi46">▄</span><span class="ansi36 ansi100">▄</span><span class="ansi36 ansi100">▄</span><span class="ansi34 ansi44">▄</span><span class="ansi34 ansi44">▄</span><span class="ansi34 ansi44">▄</span><span class="ansi34 ansi44">▄</span><span class="ansi34 ansi44">▄</span><span class="ansi34 ansi44">▄</span><span class="ansi35 ansi44">▄</span><span class="ansi35 ansi45">▄</span><span class="ansi35 ansi45">▄</span><span class="ansi35 ansi45">▄</span><span class="ansi35 ansi41">▄</span><span class="ansi31 ansi41">▄</span><span class="ansi31 ansi41">▄</span><span class="ansi31 ansi41">▄</span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>✓ <span class="ansi1 ansi35">Truecolor (16.7 million)</span>    <span class="ansi31 ansi41">▄</span><span class="ansi31 ansi41">▄</span><span class="ansi33 ansi43">▄</span><span class="ansi33 ansi43">▄</span><span class="ansi33 ansi43">▄</span><span class="ansi93 ansi43">▄</span><span class="ansi93 ansi103">▄</span><span class="ansi93 ansi102">▄</span><span class="ansi92 ansi42">▄</span><span class="ansi92 ansi42">▄</span><span class="ansi32 ansi42">▄</span><span class="ansi32 ansi42">▄</span><span class="ansi32 ansi42">▄</span><span class="ansi92 ansi42">▄</span><span class="ansi92 ansi42">▄</span><span class="ansi36 ansi46">▄</span><span class="ansi36 ansi46">▄</span><span class="ansi36 ansi46">▄</span><span class="ansi36 ansi46">▄</span><span class="ansi36 ansi46">▄</span><span class="ansi36 ansi46">▄</span><span class="ansi94 ansi44">▄</span><span class="ansi34 ansi44">▄</span><span class="ansi34 ansi44">▄</span><span class="ansi34 ansi44">▄</span><span class="ansi34 ansi44">▄</span><span class="ansi35 ansi45">▄</span><span class="ansi35 ansi45">▄</span><span class="ansi35 ansi45">▄</span><span class="ansi35 ansi45">▄</span><span class="ansi35 ansi45">▄</span><span class="ansi35 ansi45">▄</span><span class="ansi35 ansi45">▄</span><span class="ansi31 ansi41">▄</span><span class="ansi31 ansi41">▄</span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>✓ <span class="ansi1 ansi33">Dumb terminals</span>              <span class="ansi91 ansi41">▄</span><span class="ansi91 ansi101">▄</span><span class="ansi91 ansi101">▄</span><span class="ansi91 ansi101">▄</span><span class="ansi93 ansi103">▄</span><span class="ansi93 ansi103">▄</span><span class="ansi93 ansi103">▄</span><span class="ansi93 ansi103">▄</span><span class="ansi93 ansi102">▄</span><span class="ansi92 ansi102">▄</span><span class="ansi92 ansi102">▄</span><span class="ansi92 ansi102">▄</span><span class="ansi92 ansi102">▄</span><span class="ansi92 ansi102">▄</span><span class="ansi92 ansi102">▄</span><span class="ansi92 ansi102">▄</span><span class="ansi96 ansi106">▄</span><span class="ansi96 ansi106">▄</span><span class="ansi96 ansi106">▄</span><span class="ansi96 ansi46">▄</span><span class="ansi36 ansi46">▄</span><span class="ansi94 ansi104">▄</span><span class="ansi94 ansi104">▄</span><span class="ansi94 ansi44">▄</span><span class="ansi94 ansi44">▄</span><span class="ansi94 ansi104">▄</span><span class="ansi94 ansi45">▄</span><span class="ansi95 ansi45">▄</span><span class="ansi95 ansi45">▄</span><span class="ansi95 ansi105">▄</span><span class="ansi95 ansi105">▄</span><span class="ansi95 ansi45">▄</span><span class="ansi91 ansi45">▄</span><span class="ansi91 ansi101">▄</span><span class="ansi91 ansi101">▄</span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>✓ <span class="ansi1 ansi36">Automatic color conversion</span>  <span class="ansi91 ansi101">▄</span><span class="ansi91 ansi101">▄</span><span class="ansi37 ansi101">▄</span><span class="ansi93 ansi101">▄</span><span class="ansi93 ansi103">▄</span><span class="ansi93 ansi103">▄</span><span class="ansi93 ansi103">▄</span><span class="ansi93 ansi103">▄</span><span class="ansi93 ansi103">▄</span><span class="ansi93 ansi102">▄</span><span class="ansi92 ansi102">▄</span><span class="ansi92 ansi102">▄</span><span class="ansi92 ansi102">▄</span><span class="ansi92 ansi102">▄</span><span class="ansi96 ansi102">▄</span><span class="ansi96 ansi106">▄</span><span class="ansi96 ansi106">▄</span><span class="ansi96 ansi106">▄</span><span class="ansi96 ansi106">▄</span><span class="ansi96 ansi106">▄</span><span class="ansi96 ansi106">▄</span><span class="ansi37 ansi104">▄</span><span class="ansi94 ansi104">▄</span><span class="ansi94 ansi104">▄</span><span class="ansi94 ansi104">▄</span><span class="ansi94 ansi104">▄</span><span class="ansi95 ansi104">▄</span><span class="ansi95 ansi105">▄</span><span class="ansi95 ansi105">▄</span><span class="ansi95 ansi105">▄</span><span class="ansi95 ansi105">▄</span><span class="ansi95 ansi105">▄</span><span class="ansi95 ansi101">▄</span><span class="ansi91 ansi101">▄</span><span class="ansi91 ansi101">▄</span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>                                                                  </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31"> </span><span class="ansi1 ansi31">   Styles   </span><span class="ansi1 ansi31"> </span>All ansi styles: <span class="ansi1">bold</span>, <span class="ansi2">dim</span>, <span class="ansi3">italic</span>, <span class="ansi4">underline</span>, <span class="ansi9">strikethrough</span>,     </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="inv_background inv_foreground">reverse</span>, and even <span class="ansi5">blink</span>.                                          </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>                                                                  </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31"> </span><span class="ansi1 ansi31">    Text    </span><span class="ansi1 ansi31"> </span>Word wrap text. Justify <span class="ansi32">left</span>, <span class="ansi33">center</span>, <span class="ansi34">right</span> or <span class="ansi31">full</span>.              </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>                                                                  </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi32">Lorem ipsum    </span> <span class="ansi33">  Lorem ipsum  </span> <span class="ansi34">     Lorem ipsum</span> <span class="ansi31">Lorem</span><span class="ansi31">      </span><span class="ansi31">ipsum</span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi32">dolor sit amet,</span> <span class="ansi33">dolor sit amet,</span> <span class="ansi34"> dolor sit amet,</span> <span class="ansi31">dolor</span><span class="ansi31"> </span><span class="ansi31">sit</span><span class="ansi31">  </span><span class="ansi31">amet,</span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi32">consectetur    </span> <span class="ansi33">  consectetur  </span> <span class="ansi34">     consectetur</span> <span class="ansi31">consectetur</span>      </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi32">adipiscing     </span> <span class="ansi33">  adipiscing   </span> <span class="ansi34">adipiscing elit.</span> <span class="ansi31">adipiscing</span><span class="ansi31"> </span><span class="ansi31">elit.</span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi32">elit. Quisque  </span> <span class="ansi33"> elit. Quisque </span> <span class="ansi34">Quisque in metus</span> <span class="ansi31">Quisque</span><span class="ansi31"> </span><span class="ansi31">in</span><span class="ansi31"> </span><span class="ansi31">metus</span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi32">in metus sed   </span> <span class="ansi33"> in metus sed  </span> <span class="ansi34">      sed sapien</span> <span class="ansi31">sed</span><span class="ansi31">       </span><span class="ansi31">sapien</span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi32">sapien         </span> <span class="ansi33">    sapien     </span> <span class="ansi34">       ultricies</span> <span class="ansi31">ultricies</span>        </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi32">ultricies      </span> <span class="ansi33">   ultricies   </span> <span class="ansi34">    pretium a at</span> <span class="ansi31">pretium</span><span class="ansi31">   </span><span class="ansi31">a</span><span class="ansi31">   </span><span class="ansi31">at</span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi32">pretium a at   </span> <span class="ansi33"> pretium a at  </span> <span class="ansi34"> justo. Maecenas</span> <span class="ansi31">justo.</span><span class="ansi31">  </span><span class="ansi31">Maecenas</span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi32">justo. Maecenas</span> <span class="ansi33">justo. Maecenas</span> <span class="ansi34"> luctus velit et</span> <span class="ansi31">luctus</span><span class="ansi31"> </span><span class="ansi31">velit</span><span class="ansi31">  </span><span class="ansi31">et</span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi32">luctus velit et</span> <span class="ansi33">luctus velit et</span> <span class="ansi34"> auctor maximus.</span> <span class="ansi31">auctor maximus.</span>  </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi32">auctor maximus.</span> <span class="ansi33">auctor maximus.</span>                                   </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>                                                                  </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31"> </span><span class="ansi1 ansi31">   Asian    </span><span class="ansi1 ansi31"> </span>🇨🇳  该库支持中文，日文和韩文文本！                                </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31"> </span><span class="ansi1 ansi31">  language  </span><span class="ansi1 ansi31"> </span>🇯🇵                                                                </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31"> </span><span class="ansi1 ansi31">  support   </span><span class="ansi1 ansi31"> </span>ライブラリは中国語、日本語、韓国語のテキストをサポートしています  </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>🇰🇷  이 라이브러리는 중국어, 일본어 및 한국어 텍스트를 지원합니다  </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>                                                                  </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31"> </span><span class="ansi1 ansi31">   Markup   </span><span class="ansi1 ansi31"> </span><span class="ansi1 ansi35">Rich</span> supports a simple <span class="ansi3">bbcode</span>-like <span class="ansi1">markup</span> for <span class="ansi33">color</span>, <span class="ansi4">style</span>, and   </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>emoji! 👍 🍎 🐜 🐻 🥖 🚌                                          </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>                                                                  </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31"> </span><span class="ansi1 ansi31">   Tables   </span><span class="ansi1 ansi31"> </span><span class="ansi1"> </span><span class="ansi1 ansi32">Date</span><span class="ansi1">        </span><span class="ansi1"> </span> <span class="ansi1"> </span><span class="ansi1 ansi34">Title</span><span class="ansi1">      </span><span class="ansi1"> </span> <span class="ansi1"> </span><span class="ansi1 ansi36">Production Budget</span><span class="ansi1"> </span> <span class="ansi1"> </span><span class="ansi1">    </span><span class="ansi1 ansi35">Box Office</span><span class="ansi1"> </span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>───────────────────────────────────────────────────────────────── </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi32"> </span><span class="ansi32">Dec 20, 2019</span><span class="ansi32"> </span> <span class="ansi34"> </span><span class="ansi34">Star Wars: </span><span class="ansi34"> </span> <span class="ansi36"> </span><span class="ansi36">     $275,000,000</span><span class="ansi36"> </span> <span class="ansi35"> </span><span class="ansi35">  $375,126,118</span><span class="ansi35"> </span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi32">              </span> <span class="ansi34"> </span><span class="ansi34">The Rise of</span><span class="ansi34"> </span> <span class="ansi36">                   </span> <span class="ansi35">                </span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi32">              </span> <span class="ansi34"> </span><span class="ansi34">Skywalker  </span><span class="ansi34"> </span> <span class="ansi36">                   </span> <span class="ansi35">                </span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi2 ansi32"> </span><span class="ansi2 ansi32">May 25, 2018</span><span class="ansi2 ansi32"> </span> <span class="ansi2 ansi34"> </span><span class="ansi2 ansi34">Solo</span><span class="ansi2 ansi34">: A    </span><span class="ansi2 ansi34"> </span> <span class="ansi2 ansi36"> </span><span class="ansi2 ansi36">     $275,000,000</span><span class="ansi2 ansi36"> </span> <span class="ansi2 ansi35"> </span><span class="ansi2 ansi35">  $393,151,347</span><span class="ansi2 ansi35"> </span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi2 ansi32">              </span> <span class="ansi2 ansi34"> </span><span class="ansi2 ansi34">Star Wars  </span><span class="ansi2 ansi34"> </span> <span class="ansi2 ansi36">                   </span> <span class="ansi2 ansi35">                </span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi2 ansi32">              </span> <span class="ansi2 ansi34"> </span><span class="ansi2 ansi34">Story      </span><span class="ansi2 ansi34"> </span> <span class="ansi2 ansi36">                   </span> <span class="ansi2 ansi35">                </span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi32"> </span><span class="ansi32">Dec 15, 2017</span><span class="ansi32"> </span> <span class="ansi34"> </span><span class="ansi34">Star Wars  </span><span class="ansi34"> </span> <span class="ansi36"> </span><span class="ansi36">     $262,000,000</span><span class="ansi36"> </span> <span class="ansi35"> </span><span class="ansi1 ansi35">$1,332,539,889</span><span class="ansi35"> </span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi32">              </span> <span class="ansi34"> </span><span class="ansi34">Ep. VIII:  </span><span class="ansi34"> </span> <span class="ansi36">                   </span> <span class="ansi35">                </span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi32">              </span> <span class="ansi34"> </span><span class="ansi34">The Last   </span><span class="ansi34"> </span> <span class="ansi36">                   </span> <span class="ansi35">                </span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi32">              </span> <span class="ansi34"> </span><span class="ansi34">Jedi       </span><span class="ansi34"> </span> <span class="ansi36">                   </span> <span class="ansi35">                </span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi2 ansi32"> </span><span class="ansi2 ansi32">May 19, 1999</span><span class="ansi2 ansi32"> </span> <span class="ansi2 ansi34"> </span><span class="ansi2 ansi34">Star Wars  </span><span class="ansi2 ansi34"> </span> <span class="ansi2 ansi36"> </span><span class="ansi2 ansi36">     $115,000,000</span><span class="ansi2 ansi36"> </span> <span class="ansi2 ansi35"> </span><span class="ansi2 ansi35">$1,027,044,677</span><span class="ansi2 ansi35"> </span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi2 ansi32">              </span> <span class="ansi2 ansi34"> </span><span class="ansi2 ansi34">Ep. </span><span class="ansi2 ansi34">I</span><span class="ansi2 ansi34">: </span><span class="ansi2 ansi3 ansi34">The </span><span class="ansi2 ansi34"> </span> <span class="ansi2 ansi36">                   </span> <span class="ansi2 ansi35">                </span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi2 ansi32">              </span> <span class="ansi2 ansi34"> </span><span class="ansi2 ansi3 ansi34">phantom </span><span class="ansi2 ansi34">   </span><span class="ansi2 ansi34"> </span> <span class="ansi2 ansi36">                   </span> <span class="ansi2 ansi35">                </span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi2 ansi32">              </span> <span class="ansi2 ansi34"> </span><span class="ansi2 ansi3 ansi34">Menace</span><span class="ansi2 ansi34">     </span><span class="ansi2 ansi34"> </span> <span class="ansi2 ansi36">                   </span> <span class="ansi2 ansi35">                </span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>                                                                  </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31"> </span><span class="ansi1 ansi31">   Syntax   </span><span class="ansi1 ansi31"> </span><span class="ansi40">  </span><span class="ansi2 ansi40"> 1 </span><span class="ansi96 ansi40">def</span><span class="ansi97 ansi40"> </span><span class="ansi92 ansi40">iter_last</span><span class="ansi97 ansi40">(</span><span class="ansi97 ansi40">values</span><span class="ansi97 ansi40">:</span><span class="ansi97 ansi40"> </span><span class="ansi97 ansi40">Itera</span>  <span class="ansi1">{</span>                               </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31"> </span><span class="ansi1 ansi31">highlighting</span><span class="ansi1 ansi31"> </span><span class="ansi40">  </span><span class="ansi2 ansi40"> 2 </span><span class="ansi2 ansi90 ansi40">│   </span><span class="ansi93 ansi40">"""Iterate and generate</span>  <span class="ansi2 ansi32">│   </span><span class="ansi32">'foo'</span>: <span class="ansi1">[</span>                    </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31"> </span><span class="ansi1 ansi31">     &amp;      </span><span class="ansi1 ansi31"> </span><span class="ansi40">  </span><span class="ansi2 ansi40"> 3 </span><span class="ansi2 ansi90 ansi40">│   </span><span class="ansi97 ansi40">iter_values</span><span class="ansi97 ansi40"> </span><span class="ansi91 ansi40">=</span><span class="ansi97 ansi40"> </span><span class="ansi97 ansi40">iter</span><span class="ansi97 ansi40">(</span><span class="ansi97 ansi40">valu</span>  <span class="ansi2 ansi32">│   │   </span><span class="ansi1 ansi36">3.1427</span>,                 </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31"> </span><span class="ansi1 ansi31">   pretty   </span><span class="ansi1 ansi31"> </span><span class="ansi40">  </span><span class="ansi2 ansi40"> 4 </span><span class="ansi2 ansi90 ansi40">│   </span><span class="ansi96 ansi40">try</span><span class="ansi97 ansi40">:</span><span class="ansi40">                   </span>  <span class="ansi2 ansi32">│   │   </span><span class="ansi1">(</span>                       </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31"> </span><span class="ansi1 ansi31">  printing  </span><span class="ansi1 ansi31"> </span><span class="ansi40">  </span><span class="ansi2 ansi40"> 5 </span><span class="ansi2 ansi90 ansi40">│   │   </span><span class="ansi97 ansi40">previous_value</span><span class="ansi97 ansi40"> </span><span class="ansi91 ansi40">=</span><span class="ansi97 ansi40"> </span><span class="ansi97 ansi40">ne</span>  <span class="ansi2 ansi32">│   │   │   </span><span class="ansi32">'Paul Atreides'</span>,    </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi40">  </span><span class="ansi2 ansi40"> 6 </span><span class="ansi2 ansi90 ansi40">│   </span><span class="ansi96 ansi40">except</span><span class="ansi97 ansi40"> </span><span class="ansi92 ansi40">StopIteration</span><span class="ansi97 ansi40">:</span><span class="ansi40">  </span>  <span class="ansi2 ansi32">│   │   │   </span><span class="ansi32">'Vladimir </span>          </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi40">  </span><span class="ansi2 ansi40"> 7 </span><span class="ansi2 ansi90 ansi40">│   │   </span><span class="ansi96 ansi40">return</span><span class="ansi40">             </span>  <span class="ansi32">Harkonnen'</span>,                     </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi40">  </span><span class="ansi2 ansi40"> 8 </span><span class="ansi2 ansi90 ansi40">│   </span><span class="ansi96 ansi40">for</span><span class="ansi97 ansi40"> </span><span class="ansi97 ansi40">value</span><span class="ansi97 ansi40"> </span><span class="ansi91 ansi40">in</span><span class="ansi97 ansi40"> </span><span class="ansi97 ansi40">iter_value</span>  <span class="ansi2 ansi32">│   │   │   </span><span class="ansi32">'Thufir Hawat'</span>      </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi40">  </span><span class="ansi2 ansi40"> 9 </span><span class="ansi2 ansi90 ansi40">│   │   </span><span class="ansi96 ansi40">yield</span><span class="ansi97 ansi40"> </span><span class="ansi96 ansi40">False</span><span class="ansi97 ansi40">,</span><span class="ansi97 ansi40"> </span><span class="ansi97 ansi40">previo</span>  <span class="ansi2 ansi32">│   │   </span><span class="ansi1">)</span>                       </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi40">  </span><span class="ansi2 ansi40">10 </span><span class="ansi2 ansi90 ansi40">│   │   </span><span class="ansi97 ansi40">previous_value</span><span class="ansi97 ansi40"> </span><span class="ansi91 ansi40">=</span><span class="ansi97 ansi40"> </span><span class="ansi97 ansi40">va</span>  <span class="ansi2 ansi32">│   </span><span class="ansi1">]</span>,                          </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi40">  </span><span class="ansi2 ansi40">11 </span><span class="ansi2 ansi90 ansi40">│   </span><span class="ansi96 ansi40">yield</span><span class="ansi97 ansi40"> </span><span class="ansi96 ansi40">True</span><span class="ansi97 ansi40">,</span><span class="ansi97 ansi40"> </span><span class="ansi97 ansi40">previous_va</span>  <span class="ansi2 ansi32">│   </span><span class="ansi32">'atomic'</span>: <span class="ansi1">(</span>                 </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>                                  <span class="ansi2 ansi32">│   │   </span><span class="ansi3 ansi91">False</span>,                  </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>                                  <span class="ansi2 ansi32">│   │   </span><span class="ansi3 ansi92">True</span>,                   </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>                                  <span class="ansi2 ansi32">│   │   </span><span class="ansi3 ansi35">None</span>                    </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>                                  <span class="ansi2 ansi32">│   </span><span class="ansi1">)</span>                           </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>                                  <span class="ansi1">}</span>                               </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>                                                                  </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31"> </span><span class="ansi1 ansi31">  Markdown  </span><span class="ansi1 ansi31"> </span><span class="ansi36"># Markdown</span>                        ╔═════════════════════════════╗ </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>                                  ║          <span class="ansi1">Markdown</span>           ║ </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi36">Supports much of the *markdown* </span>  ╚═════════════════════════════╝ </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi36">__syntax__!</span>                                                       </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>                                  Supports much of the <span class="ansi3">markdown</span>   </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi36">- Headers</span>                         <span class="ansi1">syntax</span>!                         </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi36">- Basic formatting: **bold**, </span>                                    </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi36">*italic*, `code`</span>                  <span class="ansi1 ansi33"> • </span>Headers                      </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi36">- Block quotes</span>                    <span class="ansi1 ansi33"> • </span>Basic formatting: <span class="ansi1">bold</span>,      </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi36">- Lists, and more...</span>              <span class="ansi1 ansi33">   </span><span class="ansi3">italic</span>, <span class="ansi97 ansi40">code</span>                 </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi36">    </span>                              <span class="ansi1 ansi33"> • </span>Block quotes                 </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>                                  <span class="ansi1 ansi33"> • </span>Lists, and more...           </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>                                                                  </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31"> </span><span class="ansi1 ansi31">   +more!   </span><span class="ansi1 ansi31"> </span>Progress bars, columns, styled logging handler, tracebacks,       </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>etc...                                                            </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>                                                                  </span>
+<span data-ty="" data-ty-delay="0">rendered in 107.3ms (cold cache)</span>
+<span data-ty="" data-ty-delay="5">rendered in 42.5ms (warm cache)</span>
+<span data-ty="" data-ty-delay="0"><span class="ansi94">╭─</span><span class="ansi94">─────────────────────── </span><span class="ansi1 ansi31">Thanks for trying out Rich!</span><span class="ansi94"> ────────────────────────</span><span class="ansi94">─╮</span></span>
+<span data-ty="" data-ty-delay="0"><span class="ansi94">│</span>                                                                              <span class="ansi94">│</span></span>
+<span data-ty="" data-ty-delay="0"><span class="ansi94">│</span>  We hope you enjoy using      <span class="ansi32">   Textualize</span><span class="ansi32"> </span>]8;id=925170;https://github.com/textualize\<span class="ansi4 ansi34">https://github.com/textualize</span>]8;;\    <span class="ansi94">│</span></span>
+<span data-ty="" data-ty-delay="0"><span class="ansi94">│</span>  Rich!                        <span class="ansi32">              </span>                                 <span class="ansi94">│</span></span>
+<span data-ty="" data-ty-delay="0"><span class="ansi94">│</span>                               <span class="ansi32">Buy devs a ☕</span><span class="ansi32"> </span>]8;id=185526;https://ko-fi.com/textualize\<span class="ansi4 ansi34">https://ko-fi.com/textualize</span>]8;;\     <span class="ansi94">│</span></span>
+<span data-ty="" data-ty-delay="0"><span class="ansi94">│</span>  Rich is maintained with <span class="ansi31">❤</span>    <span class="ansi32">              </span>                                 <span class="ansi94">│</span></span>
+<span data-ty="" data-ty-delay="0"><span class="ansi94">│</span>  by ]8;id=809211;https://www.textualize.io\Textualize.io]8;;\             <span class="ansi32">      Twitter</span><span class="ansi32"> </span>]8;id=956912;https://twitter.com/willmcgugan\<span class="ansi4 ansi34">https://twitter.com/willmcgugan</span>]8;;\  <span class="ansi94">│</span></span>
+<span data-ty="" data-ty-delay="0"><span class="ansi94">│</span>                                                                              <span class="ansi94">│</span></span>
+<span data-ty="" data-ty-delay="0"><span class="ansi94">│</span>  - Will McGugan                                                              <span class="ansi94">│</span></span>
+<span data-ty="" data-ty-delay="0"><span class="ansi94">│</span>                                                                              <span class="ansi94">│</span></span>
+<span data-ty="" data-ty-delay="13"><span class="ansi94">╰──────────────────────────────────────────────────────────────────────────────╯</span></span>
+<span data-ty="" data-ty-delay="0"></span>
+</pre><p>For more information on getting started, take a look at the tutorial and examples.</p>
+</section>
+<section id="tutorial-and-examples">
+<h2 id="tutorial-and-examples">Tutorial and Examples<a class="headerlink" href="#tutorial-and-examples" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Getting started with sphinx-terminhtml</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#install">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#usage">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="auto_examples/index.html">This is my gallery</a></li>
+</ul>
+</div>
+</section>
+<section id="api-documentation">
+<h2 id="api-documentation">API Documentation<a class="headerlink" href="#api-documentation" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/modules.html">sphinx_terminhtml</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/sphinx_terminhtml.html">sphinx_terminhtml package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/sphinx_terminhtml.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/sphinx_terminhtml.html#module-sphinx_terminhtml.assets">sphinx_terminhtml.assets module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/sphinx_terminhtml.html#module-sphinx_terminhtml.cache">sphinx_terminhtml.cache module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/sphinx_terminhtml.html#module-sphinx_terminhtml.directives">sphinx_terminhtml.directives module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/sphinx_terminhtml.html#module-sphinx_terminhtml.get_version">sphinx_terminhtml.get_version module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/sphinx_terminhtml.html#module-sphinx_terminhtml.logger">sphinx_terminhtml.logger module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/sphinx_terminhtml.html#module-sphinx_terminhtml.options">sphinx_terminhtml.options module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/sphinx_terminhtml.html#module-sphinx_terminhtml.sphinx_setup">sphinx_terminhtml.sphinx_setup module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/sphinx_terminhtml.html#module-sphinx_terminhtml.wipe_cache">sphinx_terminhtml.wipe_cache module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="indices">
+<h2 id="indices">Indices<a class="headerlink" href="#indices" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</section>
+</section>
+
+
+          </article>
+        </div>
+      </div>
+    </main>
+  </div>
+  <footer class="md-footer">
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+          
+          
+            <a href="tutorial.html" title="Getting started with sphinx-terminhtml"
+               class="md-flex md-footer-nav__link md-footer-nav__link--next"
+               rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span
+                class="md-flex__ellipsis"> <span
+                class="md-footer-nav__direction"> Next </span> Getting started with sphinx-terminhtml </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink"><i
+                class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          
+        </a>
+        
+      </nav>
+    </div>
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid">
+        <div class="md-footer-copyright">
+          <div class="md-footer-copyright__highlight">
+              &#169; Copyright 2022, Nick DeRobertis.
+              
+          </div>
+            Created using
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+             and
+            <a href="https://github.com/bashtage/sphinx-material/">Material for
+              Sphinx</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="_static/javascripts/application.js"></script>
+  <script>app.initialize({version: "1.0.4", url: {base: ".."}})</script>
+  </body>
+</html>

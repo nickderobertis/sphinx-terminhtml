@@ -1,0 +1,4 @@
+sphinx-terminhtml
+terminhtml
+requests
+appdirs
