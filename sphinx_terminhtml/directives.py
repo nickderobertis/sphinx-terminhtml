@@ -62,7 +62,7 @@ class TerminHTMLDirective(SphinxDirective):
         input: List[str] = self.options.get("input", [])
         allow_exceptions: bool = "allow-exceptions" in self.options
         terminhtml = TerminHTML.from_commands(
-            self.content,
+            list(self.content),
             use_setup_commands,
             input=input,
             allow_exceptions=allow_exceptions,

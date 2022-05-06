@@ -22,10 +22,13 @@ import pathlib
 import sys
 import datetime
 import warnings
+from typing import Final, List
+
 
 sys.path.insert(0, os.path.abspath('../..'))
 import conf
 import version as vs
+from sphinx_terminhtml import create_terminhtml_directive_with_setup
 from docsrc.directives.auto_summary import AutoSummaryNameOnly
 
 # -- General configuration ------------------------------------------------
@@ -53,6 +56,7 @@ extensions = [
     'sphinx_gallery.gen_gallery',
     'sphinx_copybutton',
     'myst_parser',
+    "sphinx_terminhtml",
 ]
 
 # Options for sphinx_autodoc_typehints
@@ -260,7 +264,17 @@ def skip(app, what, name, obj, would_skip, options):
         return False
     return would_skip
 
+git_init_commands: Final[List[str]] = [
+    "git init",
+    "touch woo.txt",
+    "git add .",
+    "git commit -m 'Initial commit'",
+]
+
+terminal_prompt_matchers: Final[List[str]] = ["]: ", r"0m: "]
 
 def setup(app):
     app.connect("autodoc-skip-member", skip)
     app.add_directive('autosummarynameonly', AutoSummaryNameOnly)
+    app.add_directive("run-git-terminal",
+                      create_terminhtml_directive_with_setup(git_init_commands, terminal_prompt_matchers))

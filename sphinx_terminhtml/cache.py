@@ -5,6 +5,7 @@ from typing import Sequence, List, Optional
 import appdirs
 from pydantic import BaseModel
 
+from .logger import log
 from .options import RunTerminalOptions
 
 
@@ -51,8 +52,10 @@ class TerminalCache:
         inputs = CacheInputs(content=content, options=options)
         path = self.cache_dir / inputs.file_name
         if not path.exists():
-            print(f"Cache miss for terminal directive: {inputs}")
+            log.info(f"Cache miss for terminal directive: {inputs}")
             return None
+        else:
+            log.info(f"Cache hit for terminal directive: {inputs}. Loading from {path}")
 
         out_content = path.read_bytes().decode().split("\n")
         return CacheOutput(content=out_content, input=inputs)

@@ -8,6 +8,10 @@
 ```{include} ../../README.md
 ```
 
+```{terminhtml}
+python -m rich
+```
+
 For more information on getting started, take a look at the tutorial and examples.
 
 ## Tutorial and Examples
