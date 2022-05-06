@@ -52,10 +52,10 @@ class TerminalCache:
         inputs = CacheInputs(content=content, options=options)
         path = self.cache_dir / inputs.file_name
         if not path.exists():
-            log.info(f"Cache miss for terminal directive: {inputs}")
+            log.info(f"Cache miss for terminhtml directive: {inputs}")
             return None
         else:
-            log.info(f"Cache hit for terminal directive: {inputs}. Loading from {path}")
+            log.info(f"Cache hit for terminhtml directive: {inputs}. Loading from {path}")
 
         out_content = path.read_text()
         return CacheOutput(content=out_content, input=inputs)
