@@ -8,7 +8,7 @@ from sphinx.application import Sphinx
 from sphinx.util.fileutil import copy_asset
 from terminhtml.main import TerminHTML, CommandResults
 
-JS_BASE_URL = "https://unpkg.com/@terminhtml/bootstrap@1.0.0-alpha.12/dist/"
+JS_BASE_URL = "https://unpkg.com/@terminhtml/bootstrap@1.x/dist/"
 js_file_name = "@terminhtml-bootstrap.umd.js"
 js_file_url = f"{JS_BASE_URL}{js_file_name}"
 js_source_map_file_name = "@terminhtml-bootstrap.umd.js.map"
