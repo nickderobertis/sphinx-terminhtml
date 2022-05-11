@@ -47,7 +47,7 @@
   
   
   
-    <title>sphinx_terminhtml package &#8212; sphinx-terminhtml 1.0.0 documentation</title>
+    <title>sphinx_terminhtml package &#8212; sphinx-terminhtml 1.1.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/material.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
@@ -92,7 +92,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex navheader">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../index.html" title="sphinx-terminhtml 1.0.0 documentation"
+        <a href="../index.html" title="sphinx-terminhtml 1.1.0 documentation"
            class="md-header-nav__button md-logo">
           
             <i class="md-icon">&#xe869</i>
@@ -178,7 +178,7 @@
   <nav class="md-tabs" data-md-component="tabs">
     <div class="md-tabs__inner md-grid">
       <ul class="md-tabs__list">
-          <li class="md-tabs__item"><a href="../index.html" class="md-tabs__link">sphinx-terminhtml 1.0.0 documentation</a></li>
+          <li class="md-tabs__item"><a href="../index.html" class="md-tabs__link">sphinx-terminhtml 1.1.0 documentation</a></li>
           <li class="md-tabs__item"><a href="modules.html" class="md-tabs__link">sphinx_terminhtml</a></li>
       </ul>
     </div>
@@ -191,13 +191,13 @@
               <div class="md-sidebar__inner">
                 <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="../index.html" title="sphinx-terminhtml 1.0.0 documentation" class="md-nav__button md-logo">
+    <a href="../index.html" title="sphinx-terminhtml 1.1.0 documentation" class="md-nav__button md-logo">
       
         <i class="md-icon">&#xe869</i>
       
     </a>
     <a href="../index.html"
-       title="sphinx-terminhtml 1.0.0 documentation">sphinx-terminhtml</a>
+       title="sphinx-terminhtml 1.1.0 documentation">sphinx-terminhtml</a>
   </label>
     <div class="md-nav__source">
       <a href="https://github.com/nickderobertis/sphinx-terminhtml" title="Go to repository" class="md-source" data-md-source="github">
@@ -517,6 +517,24 @@
 </dd>
 </dl>
 </dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="sphinx_terminhtml.directives.TerminHTMLDirective.current_file_folder">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">current_file_folder</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path" title="(in Python v3.10)"><span class="pre">pathlib.Path</span></a></em><a class="headerlink" href="#sphinx_terminhtml.directives.TerminHTMLDirective.current_file_folder" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Path</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="sphinx_terminhtml.directives.TerminHTMLDirective.cwd">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cwd</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path" title="(in Python v3.10)"><span class="pre">pathlib.Path</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#sphinx_terminhtml.directives.TerminHTMLDirective.cwd" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Path</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sphinx_terminhtml.directives.TerminHTMLDirective.has_content">
 <span class="sig-name descname"><span class="pre">has_content</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#sphinx_terminhtml.directives.TerminHTMLDirective.has_content" title="Permalink to this definition">¶</a></dt>
@@ -524,13 +542,22 @@
 </dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sphinx_terminhtml.directives.TerminHTMLDirective.option_spec">
-<span class="sig-name descname"><span class="pre">option_spec</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'allow-exceptions':</span> <span class="pre">&lt;function</span> <span class="pre">flag&gt;,</span> <span class="pre">'input':</span> <span class="pre">&lt;function</span> <span class="pre">_get_list&gt;,</span> <span class="pre">'prompt-matchers':</span> <span class="pre">&lt;function</span> <span class="pre">_get_list&gt;,</span> <span class="pre">'setup':</span> <span class="pre">&lt;function</span> <span class="pre">unchanged&gt;}</span></em><a class="headerlink" href="#sphinx_terminhtml.directives.TerminHTMLDirective.option_spec" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">option_spec</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'allow-exceptions':</span> <span class="pre">&lt;function</span> <span class="pre">flag&gt;,</span> <span class="pre">'cwd':</span> <span class="pre">&lt;function</span> <span class="pre">unchanged&gt;,</span> <span class="pre">'cwd-relative-to':</span> <span class="pre">&lt;function</span> <span class="pre">_validate_cwd_relative_to&gt;,</span> <span class="pre">'input':</span> <span class="pre">&lt;function</span> <span class="pre">_get_list&gt;,</span> <span class="pre">'prompt-matchers':</span> <span class="pre">&lt;function</span> <span class="pre">_get_list&gt;,</span> <span class="pre">'setup':</span> <span class="pre">&lt;function</span> <span class="pre">unchanged&gt;}</span></em><a class="headerlink" href="#sphinx_terminhtml.directives.TerminHTMLDirective.option_spec" title="Permalink to this definition">¶</a></dt>
 <dd><p>Mapping of option names to validator functions.</p>
 </dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sphinx_terminhtml.directives.TerminHTMLDirective.required_arguments">
 <span class="sig-name descname"><span class="pre">required_arguments</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#sphinx_terminhtml.directives.TerminHTMLDirective.required_arguments" title="Permalink to this definition">¶</a></dt>
 <dd><p>Number of required directive arguments.</p>
+</dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="sphinx_terminhtml.directives.TerminHTMLDirective.root_source_dir">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">root_source_dir</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path" title="(in Python v3.10)"><span class="pre">pathlib.Path</span></a></em><a class="headerlink" href="#sphinx_terminhtml.directives.TerminHTMLDirective.root_source_dir" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Path</span></code></a></p>
+</dd>
+</dl>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="sphinx_terminhtml.directives.TerminHTMLDirective.run">
@@ -615,9 +642,31 @@
 <section id="module-sphinx_terminhtml.options">
 <span id="sphinx-terminhtml-options-module"></span><h2 id="module-sphinx_terminhtml.options">sphinx_terminhtml.options module<a class="headerlink" href="#module-sphinx_terminhtml.options" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
+<dt class="sig sig-object py" id="sphinx_terminhtml.options.CWDRelativeTo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sphinx_terminhtml.options.</span></span><span class="sig-name descname"><span class="pre">CWDRelativeTo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/sphinx_terminhtml/options.html#CWDRelativeTo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sphinx_terminhtml.options.CWDRelativeTo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sphinx_terminhtml.options.CWDRelativeTo.CURRENT_SOURCE">
+<span class="sig-name descname"><span class="pre">CURRENT_SOURCE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'current_source'</span></em><a class="headerlink" href="#sphinx_terminhtml.options.CWDRelativeTo.CURRENT_SOURCE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sphinx_terminhtml.options.CWDRelativeTo.CWD">
+<span class="sig-name descname"><span class="pre">CWD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'cwd'</span></em><a class="headerlink" href="#sphinx_terminhtml.options.CWDRelativeTo.CWD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sphinx_terminhtml.options.CWDRelativeTo.SOURCES_ROOT">
+<span class="sig-name descname"><span class="pre">SOURCES_ROOT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'sources_root'</span></em><a class="headerlink" href="#sphinx_terminhtml.options.CWDRelativeTo.SOURCES_ROOT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+</dd></dl>
+<dl class="py class">
 <dt class="sig sig-object py" id="sphinx_terminhtml.options.RunTerminalOptions">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sphinx_terminhtml.options.</span></span><span class="sig-name descname"><span class="pre">RunTerminalOptions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_typename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_fields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sphinx_terminhtml.options.RunTerminalOptions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sphinx_terminhtml.options.RunTerminalOptions.cwd">
+<span class="sig-name descname"><span class="pre">cwd</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#sphinx_terminhtml.options.RunTerminalOptions.cwd" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sphinx_terminhtml.options.RunTerminalOptions.input">
 <span class="sig-name descname"><span class="pre">input</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#sphinx_terminhtml.options.RunTerminalOptions.input" title="Permalink to this definition">¶</a></dt>
