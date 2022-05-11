@@ -1,4 +1,5 @@
 import ast
+from pathlib import Path
 from typing import List, Sequence, Optional, Type
 
 
@@ -10,7 +11,7 @@ from docutils import nodes
 from terminhtml.main import TerminHTML
 
 from sphinx_terminhtml.cache import TerminalCache
-from sphinx_terminhtml.options import RunTerminalOptions
+from sphinx_terminhtml.options import RunTerminalOptions, CWDRelativeTo
 
 
 def html(content: str) -> nodes.raw:
@@ -25,6 +26,18 @@ def _get_list(input: str) -> List[str]:
     return ast.literal_eval(input)
 
 
+def _get_optional_path(in_path: Optional[str]) -> Optional[Path]:
+    if in_path is None:
+        return None
+    return Path(in_path)
+
+
+def _validate_cwd_relative_to(argument: Optional[str]) -> Optional[CWDRelativeTo]:
+    if argument is None:
+        return None
+    return directives.choice(argument, [val.value for val in CWDRelativeTo])  # type: ignore
+
+
 cache = TerminalCache()
 
 
@@ -35,6 +48,8 @@ class TerminHTMLDirective(SphinxDirective):
         "input": _get_list,
         "prompt-matchers": _get_list,
         "allow-exceptions": directives.flag,
+        "cwd": directives.unchanged,
+        "cwd-relative-to": _validate_cwd_relative_to,
     }
     has_content = True
     always_setup_commands: List[str] = []
@@ -47,6 +62,32 @@ class TerminHTMLDirective(SphinxDirective):
     @property
     def commands(self) -> List[str]:
         return list(self.content)
+
+    @property
+    def root_source_dir(self) -> Path:
+        return Path(self.env.srcdir)
+
+    @property
+    def current_file_folder(self) -> Path:
+        file_str, line = self.get_source_info()
+        return Path(file_str).parent
+
+    @property
+    def cwd(self) -> Optional[Path]:
+        cwd = _get_optional_path(self.options.get("cwd"))
+        if cwd is None:
+            return None
+        if cwd.is_absolute():
+            return cwd
+        # Resolve path based on relative to option
+        cwd_relative_to = self.options.get("cwd-relative-to", CWDRelativeTo.CWD)
+        if cwd_relative_to == CWDRelativeTo.CWD:
+            return cwd.resolve()
+        if cwd_relative_to == CWDRelativeTo.SOURCES_ROOT:
+            return (self.root_source_dir / cwd).resolve()
+        if cwd_relative_to == CWDRelativeTo.CURRENT_SOURCE:
+            return (self.current_file_folder / cwd).resolve()
+        raise ValueError(f"Unknown cwd-relative-to: {cwd_relative_to}")
 
     def _run_commands_in_temp_dir_generate_output_html(self) -> str:
         self.options: RunTerminalOptions
@@ -70,6 +111,7 @@ class TerminHTMLDirective(SphinxDirective):
             input=input,
             allow_exceptions=allow_exceptions,
             prompt_matchers=use_prompt_matchers,
+            cwd=self.cwd,
         )
 
     def _load_cache_or_run_commands_in_temp_dir_get_output_list(
@@ -78,6 +120,7 @@ class TerminHTMLDirective(SphinxDirective):
         input: List[Optional[str]],
         allow_exceptions: bool,
         prompt_matchers: List[str],
+        cwd: Optional[Path] = None,
     ) -> str:
         self.content: StringList
         cached_result = cache.get(list(self.content), self.options)
@@ -85,7 +128,7 @@ class TerminHTMLDirective(SphinxDirective):
             return cached_result.content
 
         result = self._run_commands_in_temp_dir_generate_html(
-            setup_commands, input, allow_exceptions, prompt_matchers
+            setup_commands, input, allow_exceptions, prompt_matchers, cwd=cwd
         )
         cache.set(self.commands, self.options, result)
         return result
@@ -96,6 +139,7 @@ class TerminHTMLDirective(SphinxDirective):
         input: List[Optional[str]],
         allow_exceptions: bool,
         prompt_matchers: List[str],
+        cwd: Optional[Path] = None,
     ) -> str:
         terminhtml = TerminHTML.from_commands(
             self.commands,
@@ -103,6 +147,7 @@ class TerminHTMLDirective(SphinxDirective):
             input=input,
             allow_exceptions=allow_exceptions,
             prompt_matchers=prompt_matchers,
+            cwd=cwd,
         )
         return terminhtml.to_html(full=False)
 

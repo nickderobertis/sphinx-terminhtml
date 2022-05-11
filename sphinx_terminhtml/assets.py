@@ -15,6 +15,7 @@ js_source_map_file_name = "@terminhtml-bootstrap.umd.js.map"
 js_source_map_file_url = f"{JS_BASE_URL}{js_source_map_file_name}"
 css_file_name = "ansi2html.css"
 
+
 def download_and_copy_asset_files(app: Sphinx, exc):
     if exc is not None:
         # Build failed, don't copy assets

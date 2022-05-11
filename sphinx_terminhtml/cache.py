@@ -55,7 +55,9 @@ class TerminalCache:
             log.info(f"Cache miss for terminhtml directive: {inputs}")
             return None
         else:
-            log.info(f"Cache hit for terminhtml directive: {inputs}. Loading from {path}")
+            log.info(
+                f"Cache hit for terminhtml directive: {inputs}. Loading from {path}"
+            )
 
         out_content = path.read_text()
         return CacheOutput(content=out_content, input=inputs)
