@@ -20,7 +20,7 @@ REPO_MAINTAINERS = [
 ]
 
 # Package version in the format (major, minor, release)
-PACKAGE_VERSION_TUPLE = (1, 0, 0)
+PACKAGE_VERSION_TUPLE = (1, 1, 0)
 
 # Short description of the package
 PACKAGE_SHORT_DESCRIPTION = "Write bash commands in a Sphinx directive, output an animated HTML/CSS terminal"
