@@ -11,6 +11,7 @@ from docutils import nodes
 from terminhtml.main import TerminHTML
 
 from sphinx_terminhtml.cache import TerminalCache
+from sphinx_terminhtml.logger import log
 from sphinx_terminhtml.options import RunTerminalOptions, CWDRelativeTo
 
 
@@ -50,6 +51,7 @@ class TerminHTMLDirective(SphinxDirective):
         "allow-exceptions": directives.flag,
         "cwd": directives.unchanged,
         "cwd-relative-to": _validate_cwd_relative_to,
+        "disable-cache": directives.flag,
     }
     has_content = True
     always_setup_commands: List[str] = []
@@ -123,9 +125,14 @@ class TerminHTMLDirective(SphinxDirective):
         cwd: Optional[Path] = None,
     ) -> str:
         self.content: StringList
-        cached_result = cache.get(list(self.content), self.options)
-        if cached_result:
-            return cached_result.content
+        cache_enabled: bool = self.env.config.terminhtml_cache
+        disable_this_terminal_cache: bool = "disable-cache" in self.options
+        if cache_enabled and not disable_this_terminal_cache:
+            cached_result = cache.get(list(self.content), self.options)
+            if cached_result:
+                return cached_result.content
+        else:
+            log.info(f"TerminHTML cache disabled, running commands {self.content}")
 
         result = self._run_commands_in_temp_dir_generate_html(
             setup_commands, input, allow_exceptions, prompt_matchers, cwd=cwd
