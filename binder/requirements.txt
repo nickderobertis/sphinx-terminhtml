@@ -1,4 +1,4 @@
+requests
 terminhtml>=0.6.0
 sphinx-terminhtml
-requests
 appdirs
