@@ -17,9 +17,8 @@ For more information on getting started, take a look at the tutorial and example
 ## Tutorial and Examples
 
 ```{toctree}
-
 tutorial
-auto_examples/index
+tests/index
 ```
 
 ## API Documentation
