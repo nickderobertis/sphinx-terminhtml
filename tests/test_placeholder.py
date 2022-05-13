@@ -1,5 +1,3 @@
-
-
 def test_placeholder():
     """
     Test placeholder

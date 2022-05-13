@@ -5,6 +5,16 @@
 
 # Welcome to Sphinx TerminHTML documentation!
 
+```{terminhtml}
+---
+prompt-matchers: "['\\[0m: ']"
+input: "Nick DeRobertis"
+cwd: ..
+echo:
+---
+python -m terminhtml.demo_output
+```
+
 ```{include} ../../README.md
 ```
 
