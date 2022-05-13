@@ -68,7 +68,7 @@
     <link rel="canonical" href="https://nickderobertis.github.io/sphinx-terminhtml/tests/echo.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="sphinx_terminhtml" href="../api/modules.html" />
+    <link rel="next" title="Terminal tests" href="term.html" />
     <link rel="prev" title="CWD Tests" href="cwd.html" />
   
    
@@ -263,6 +263,13 @@
 </nav>
       
     
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="term.html" class="md-nav__link">Terminal tests</a>
+      
+    
     </li></ul>
     
     </li>
@@ -303,42 +310,42 @@
   <section id="echo-tests">
 <h1 id="tests-echo--page-root">Echo Tests<a class="headerlink" href="#tests-echo--page-root" title="Permalink to this headline">¶</a></h1>
 <pre class="terminhtml">
-    <span data-ty="" data-ty-delay="36">$ echo 'Should always echo due to directive echo'</span>
+    <span data-ty="" data-ty-delay="52">$ echo 'Should always echo due to directive echo'</span>
 <span data-ty="" data-ty-delay="0">Should always echo due to directive echo</span>
 <span data-ty="" data-ty-delay="0"></span>
-<span data-ty="" data-ty-delay="40">$ ls -l</span>
+<span data-ty="" data-ty-delay="49">$ ls -l</span>
 <span data-ty="" data-ty-delay="0">total 48</span>
-<span data-ty="" data-ty-delay="0">-rw-r--r-- 1 runner docker 1070 May 13 11:31 Makefile</span>
-<span data-ty="" data-ty-delay="0">drwxr-xr-x 3 runner docker 4096 May 13 11:31 apidoc</span>
-<span data-ty="" data-ty-delay="0">-rwxr-xr-x 1 runner docker  564 May 13 11:31 autobuild.sh</span>
-<span data-ty="" data-ty-delay="0">-rwxr-xr-x 1 runner docker  139 May 13 11:31 binder_requirements.sh</span>
-<span data-ty="" data-ty-delay="0">drwxr-xr-x 4 runner docker 4096 May 13 11:33 build</span>
-<span data-ty="" data-ty-delay="0">-rw-r--r-- 1 runner docker 1245 May 13 11:31 create_cwd_test_md.py</span>
-<span data-ty="" data-ty-delay="0">-rwxr-xr-x 1 runner docker  662 May 13 11:31 dev-server.sh</span>
-<span data-ty="" data-ty-delay="0">drwxr-xr-x 2 runner docker 4096 May 13 11:31 directives</span>
-<span data-ty="" data-ty-delay="0">-rwxr-xr-x 1 runner docker   47 May 13 11:31 download-logo.sh</span>
-<span data-ty="" data-ty-delay="0">-rw-r--r-- 1 runner docker  776 May 13 11:31 make.bat</span>
-<span data-ty="" data-ty-delay="0">-rwxr-xr-x 1 runner docker  142 May 13 11:31 nb-examples.sh</span>
-<span data-ty="" data-ty-delay="0">drwxr-xr-x 6 runner docker 4096 May 13 11:33 source</span>
+<span data-ty="" data-ty-delay="0">-rw-r--r-- 1 runner docker 1070 May 13 15:19 Makefile</span>
+<span data-ty="" data-ty-delay="0">drwxr-xr-x 3 runner docker 4096 May 13 15:19 apidoc</span>
+<span data-ty="" data-ty-delay="0">-rwxr-xr-x 1 runner docker  564 May 13 15:19 autobuild.sh</span>
+<span data-ty="" data-ty-delay="0">-rwxr-xr-x 1 runner docker  139 May 13 15:19 binder_requirements.sh</span>
+<span data-ty="" data-ty-delay="0">drwxr-xr-x 4 runner docker 4096 May 13 15:21 build</span>
+<span data-ty="" data-ty-delay="0">-rw-r--r-- 1 runner docker 1245 May 13 15:19 create_cwd_test_md.py</span>
+<span data-ty="" data-ty-delay="0">-rwxr-xr-x 1 runner docker  662 May 13 15:19 dev-server.sh</span>
+<span data-ty="" data-ty-delay="0">drwxr-xr-x 2 runner docker 4096 May 13 15:19 directives</span>
+<span data-ty="" data-ty-delay="0">-rwxr-xr-x 1 runner docker   47 May 13 15:19 download-logo.sh</span>
+<span data-ty="" data-ty-delay="0">-rw-r--r-- 1 runner docker  776 May 13 15:19 make.bat</span>
+<span data-ty="" data-ty-delay="0">-rwxr-xr-x 1 runner docker  142 May 13 15:19 nb-examples.sh</span>
+<span data-ty="" data-ty-delay="0">drwxr-xr-x 6 runner docker 4096 May 13 15:21 source</span>
 <span data-ty="" data-ty-delay="0"></span>
 </pre><pre class="terminhtml">
-    <span data-ty="" data-ty-delay="36">$ echo 'Should only echo when config terminhtml_echo=True'</span>
+    <span data-ty="" data-ty-delay="48">$ echo 'Should only echo when config terminhtml_echo=True'</span>
 <span data-ty="" data-ty-delay="0">Should only echo when config terminhtml_echo=True</span>
 <span data-ty="" data-ty-delay="0"></span>
-<span data-ty="" data-ty-delay="40">$ ls -l</span>
+<span data-ty="" data-ty-delay="50">$ ls -l</span>
 <span data-ty="" data-ty-delay="0">total 48</span>
-<span data-ty="" data-ty-delay="0">-rw-r--r-- 1 runner docker 1070 May 13 11:31 Makefile</span>
-<span data-ty="" data-ty-delay="0">drwxr-xr-x 3 runner docker 4096 May 13 11:31 apidoc</span>
-<span data-ty="" data-ty-delay="0">-rwxr-xr-x 1 runner docker  564 May 13 11:31 autobuild.sh</span>
-<span data-ty="" data-ty-delay="0">-rwxr-xr-x 1 runner docker  139 May 13 11:31 binder_requirements.sh</span>
-<span data-ty="" data-ty-delay="0">drwxr-xr-x 4 runner docker 4096 May 13 11:33 build</span>
-<span data-ty="" data-ty-delay="0">-rw-r--r-- 1 runner docker 1245 May 13 11:31 create_cwd_test_md.py</span>
-<span data-ty="" data-ty-delay="0">-rwxr-xr-x 1 runner docker  662 May 13 11:31 dev-server.sh</span>
-<span data-ty="" data-ty-delay="0">drwxr-xr-x 2 runner docker 4096 May 13 11:31 directives</span>
-<span data-ty="" data-ty-delay="0">-rwxr-xr-x 1 runner docker   47 May 13 11:31 download-logo.sh</span>
-<span data-ty="" data-ty-delay="0">-rw-r--r-- 1 runner docker  776 May 13 11:31 make.bat</span>
-<span data-ty="" data-ty-delay="0">-rwxr-xr-x 1 runner docker  142 May 13 11:31 nb-examples.sh</span>
-<span data-ty="" data-ty-delay="0">drwxr-xr-x 6 runner docker 4096 May 13 11:33 source</span>
+<span data-ty="" data-ty-delay="0">-rw-r--r-- 1 runner docker 1070 May 13 15:19 Makefile</span>
+<span data-ty="" data-ty-delay="0">drwxr-xr-x 3 runner docker 4096 May 13 15:19 apidoc</span>
+<span data-ty="" data-ty-delay="0">-rwxr-xr-x 1 runner docker  564 May 13 15:19 autobuild.sh</span>
+<span data-ty="" data-ty-delay="0">-rwxr-xr-x 1 runner docker  139 May 13 15:19 binder_requirements.sh</span>
+<span data-ty="" data-ty-delay="0">drwxr-xr-x 4 runner docker 4096 May 13 15:21 build</span>
+<span data-ty="" data-ty-delay="0">-rw-r--r-- 1 runner docker 1245 May 13 15:19 create_cwd_test_md.py</span>
+<span data-ty="" data-ty-delay="0">-rwxr-xr-x 1 runner docker  662 May 13 15:19 dev-server.sh</span>
+<span data-ty="" data-ty-delay="0">drwxr-xr-x 2 runner docker 4096 May 13 15:19 directives</span>
+<span data-ty="" data-ty-delay="0">-rwxr-xr-x 1 runner docker   47 May 13 15:19 download-logo.sh</span>
+<span data-ty="" data-ty-delay="0">-rw-r--r-- 1 runner docker  776 May 13 15:19 make.bat</span>
+<span data-ty="" data-ty-delay="0">-rwxr-xr-x 1 runner docker  142 May 13 15:19 nb-examples.sh</span>
+<span data-ty="" data-ty-delay="0">drwxr-xr-x 6 runner docker 4096 May 13 15:21 source</span>
 <span data-ty="" data-ty-delay="0"></span>
 </pre></section>
 
@@ -366,12 +373,12 @@
             </a>
           
           
-            <a href="../api/modules.html" title="sphinx_terminhtml"
+            <a href="term.html" title="Terminal tests"
                class="md-flex md-footer-nav__link md-footer-nav__link--next"
                rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span
                 class="md-flex__ellipsis"> <span
-                class="md-footer-nav__direction"> Next </span> sphinx_terminhtml </span>
+                class="md-footer-nav__direction"> Next </span> Terminal tests </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink"><i
                 class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>

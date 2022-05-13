@@ -1,0 +1,481 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="lang:clipboard.copy" content="Copy to clipboard">
+  <meta name="lang:clipboard.copied" content="Copied to clipboard">
+  <meta name="lang:search.language" content="en">
+  <meta name="lang:search.pipeline.stopwords" content="True">
+  <meta name="lang:search.pipeline.trimmer" content="True">
+  <meta name="lang:search.result.none" content="No matching documents">
+  <meta name="lang:search.result.one" content="1 matching document">
+  <meta name="lang:search.result.other" content="# matching documents">
+  <meta name="lang:search.tokenizer" content="[\s\-]+">
+
+  
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto:300,400,400i,700&display=fallback" rel="stylesheet">
+
+    <style>
+      body,
+      input {
+        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif
+      }
+
+      code,
+      kbd,
+      pre {
+        font-family: "Roboto Mono", "Courier New", Courier, monospace
+      }
+    </style>
+  
+
+  <link rel="stylesheet" href="../_static/stylesheets/application.css"/>
+  <link rel="stylesheet" href="../_static/stylesheets/application-palette.css"/>
+  <link rel="stylesheet" href="../_static/stylesheets/application-fixes.css"/>
+  
+  <link rel="stylesheet" href="../_static/fonts/material-icons.css"/>
+  
+  <meta name="theme-color" content="#3f51b5">
+  <script src="../_static/javascripts/modernizr.js"></script>
+  
+  
+  
+    <title>Terminal tests &#8212; sphinx-terminhtml 1.3.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/material.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/ansi2html.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx_paramlinks.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/@terminhtml-bootstrap.umd.js"></script>
+    <script src="../_static/@terminhtml-bootstrap.umd.js.map"></script>
+    <link rel="canonical" href="https://nickderobertis.github.io/sphinx-terminhtml/tests/term.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="sphinx_terminhtml" href="../api/modules.html" />
+    <link rel="prev" title="Echo Tests" href="echo.html" />
+  
+   
+
+  </head>
+  <body dir=ltr
+        data-md-color-primary=indigo data-md-color-accent=deep-purple>
+  
+  <svg class="md-svg">
+    <defs data-children-count="0">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+      
+    </defs>
+  </svg>
+  
+  <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer">
+  <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search">
+  <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+  <a href="#tests/term" tabindex="1" class="md-skip"> Skip to content </a>
+  <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex navheader">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../index.html" title="sphinx-terminhtml 1.3.0 documentation"
+           class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">&#xe869</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          <span class="md-header-nav__topic">sphinx-terminhtml</span>
+          <span class="md-header-nav__topic"> Terminal tests </span>
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+        
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" action="../search.html" method="get" name="search">
+      <input type="text" class="md-search__input" name="q" placeholder="Search"
+             autocapitalize="off" autocomplete="off" spellcheck="false"
+             data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            <a href="https://github.com/nickderobertis/sphinx-terminhtml" title="Go to repository" class="md-source" data-md-source="github">
+
+    <div class="md-source__icon">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" width="28" height="28">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    sphinx-terminhtml
+  </div>
+</a>
+          </div>
+        </div>
+      
+      
+  
+  <script src="../_static/javascripts/version_dropdown.js"></script>
+  <script>
+    var json_loc = "../"versions.json"",
+        target_loc = "../../",
+        text = "Versions";
+    $( document ).ready( add_version_dropdown(json_loc, target_loc, text));
+  </script>
+  
+
+    </div>
+  </nav>
+</header>
+
+  
+  <div class="md-container">
+    
+    
+    
+  <nav class="md-tabs" data-md-component="tabs">
+    <div class="md-tabs__inner md-grid">
+      <ul class="md-tabs__list">
+          <li class="md-tabs__item"><a href="../index.html" class="md-tabs__link">sphinx-terminhtml 1.3.0 documentation</a></li>
+          <li class="md-tabs__item"><a href="index.html" class="md-tabs__link">Tests</a></li>
+      </ul>
+    </div>
+  </nav>
+    <main class="md-main">
+      <div class="md-main__inner md-grid" data-md-component="container">
+        
+          <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../index.html" title="sphinx-terminhtml 1.3.0 documentation" class="md-nav__button md-logo">
+      
+        <i class="md-icon">&#xe869</i>
+      
+    </a>
+    <a href="../index.html"
+       title="sphinx-terminhtml 1.3.0 documentation">sphinx-terminhtml</a>
+  </label>
+    <div class="md-nav__source">
+      <a href="https://github.com/nickderobertis/sphinx-terminhtml" title="Go to repository" class="md-source" data-md-source="github">
+
+    <div class="md-source__icon">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" width="28" height="28">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    sphinx-terminhtml
+  </div>
+</a>
+    </div>
+  
+  
+
+  
+  <ul class="md-nav__list">
+    <li class="md-nav__item">
+    
+    
+      <a href="../tutorial.html" class="md-nav__link">Getting started with sphinx-terminhtml</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="index.html" class="md-nav__link">Tests</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="cache.html" class="md-nav__link">Cache Tests</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="cwd.html" class="md-nav__link">CWD Tests</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="echo.html" class="md-nav__link">Echo Tests</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    <label class="md-nav__link md-nav__link--active" for="__toc"> Terminal tests </label>
+    
+      <a href="#" class="md-nav__link md-nav__link--active">Terminal tests</a>
+      
+        
+<nav class="md-nav md-nav--secondary">
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+<li class="md-nav__item"><a class="md-nav__extra_link" href="../_sources/tests/term.md.txt">Show Source</a> </li>
+
+  </ul>
+</nav>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../api/modules.html" class="md-nav__link">sphinx_terminhtml</a>
+      
+    
+    </li>
+  </ul>
+  
+
+</nav>
+              </div>
+            </div>
+          </div>
+          <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                
+<nav class="md-nav md-nav--secondary">
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+<li class="md-nav__item"><a class="md-nav__extra_link" href="../_sources/tests/term.md.txt">Show Source</a> </li>
+
+<li id="searchbox" class="md-nav__item"></li>
+
+  </ul>
+</nav>
+              </div>
+            </div>
+          </div>
+        
+        <div class="md-content">
+          <article class="md-content__inner md-typeset" role="main">
+            
+  <section id="terminal-tests">
+<h1 id="tests-term--page-root">Terminal tests<a class="headerlink" href="#tests-term--page-root" title="Permalink to this headline">¶</a></h1>
+<pre class="terminhtml">
+    <span data-ty="" data-ty-delay="43">$ echo $TERM</span>
+<span data-ty="" data-ty-delay="0">dumb</span>
+<span data-ty="" data-ty-delay="0"></span>
+</pre><pre class="terminhtml">
+    <span data-ty="" data-ty-delay="47">$ export TERM=xterm-256color</span>
+<span data-ty="" data-ty-delay="0"></span>
+<span data-ty="" data-ty-delay="52">$ echo $TERM</span>
+<span data-ty="" data-ty-delay="0">xterm-256color</span>
+<span data-ty="" data-ty-delay="0"></span>
+<span data-ty="" data-ty-delay="466">$ python -m rich</span>
+<span data-ty="" data-ty-delay="0"><span class="ansi3">                                 Rich features                                  </span></span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>                                                                  </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31"> </span><span class="ansi1 ansi31">   Colors   </span><span class="ansi1 ansi31"> </span>✓ <span class="ansi1 ansi32">4-bit color</span>                 <span class="ansi38-88 ansi48-52">▄</span><span class="ansi38-88 ansi48-52">▄</span><span class="ansi38-94 ansi48-52">▄</span><span class="ansi38-94 ansi48-58">▄</span><span class="ansi38-94 ansi48-58">▄</span><span class="ansi38-94 ansi48-58">▄</span><span class="ansi38-100 ansi48-58">▄</span><span class="ansi38-64 ansi48-58">▄</span><span class="ansi38-64 ansi48-58">▄</span><span class="ansi38-64 ansi48-22">▄</span><span class="ansi38-28 ansi48-22">▄</span><span class="ansi38-28 ansi48-22">▄</span><span class="ansi38-28 ansi48-22">▄</span><span class="ansi38-28 ansi48-22">▄</span><span class="ansi38-29 ansi48-22">▄</span><span class="ansi38-29 ansi48-23">▄</span><span class="ansi38-29 ansi48-23">▄</span><span class="ansi38-30 ansi48-23">▄</span><span class="ansi38-30 ansi48-23">▄</span><span class="ansi38-24 ansi48-23">▄</span><span class="ansi38-24 ansi48-23">▄</span><span class="ansi38-24 ansi48-17">▄</span><span class="ansi38-18 ansi48-17">▄</span><span class="ansi38-18 ansi48-17">▄</span><span class="ansi38-18 ansi48-17">▄</span><span class="ansi38-18 ansi48-17">▄</span><span class="ansi38-54 ansi48-17">▄</span><span class="ansi38-54 ansi48-53">▄</span><span class="ansi38-54 ansi48-53">▄</span><span class="ansi38-90 ansi48-53">▄</span><span class="ansi38-89 ansi48-53">▄</span><span class="ansi38-89 ansi48-53">▄</span><span class="ansi38-89 ansi48-53">▄</span><span class="ansi38-89 ansi48-52">▄</span><span class="ansi38-88 ansi48-52">▄</span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>✓ <span class="ansi1 ansi34">8-bit color</span>                 <span class="ansi38-124 ansi48-88">▄</span><span class="ansi38-130 ansi48-88">▄</span><span class="ansi38-130 ansi48-94">▄</span><span class="ansi38-136 ansi48-94">▄</span><span class="ansi38-136 ansi48-100">▄</span><span class="ansi38-142 ansi48-100">▄</span><span class="ansi38-142 ansi48-100">▄</span><span class="ansi38-106 ansi48-100">▄</span><span class="ansi38-106 ansi48-64">▄</span><span class="ansi38-70 ansi48-64">▄</span><span class="ansi38-70 ansi48-64">▄</span><span class="ansi38-34 ansi48-28">▄</span><span class="ansi38-34 ansi48-28">▄</span><span class="ansi38-35 ansi48-29">▄</span><span class="ansi38-35 ansi48-29">▄</span><span class="ansi38-36 ansi48-29">▄</span><span class="ansi38-36 ansi48-30">▄</span><span class="ansi38-37 ansi48-30">▄</span><span class="ansi38-37 ansi48-30">▄</span><span class="ansi38-31 ansi48-30">▄</span><span class="ansi38-31 ansi48-24">▄</span><span class="ansi38-25 ansi48-24">▄</span><span class="ansi38-25 ansi48-24">▄</span><span class="ansi38-19 ansi48-18">▄</span><span class="ansi38-19 ansi48-18">▄</span><span class="ansi38-55 ansi48-54">▄</span><span class="ansi38-55 ansi48-54">▄</span><span class="ansi38-91 ansi48-54">▄</span><span class="ansi38-91 ansi48-90">▄</span><span class="ansi38-127 ansi48-90">▄</span><span class="ansi38-127 ansi48-90">▄</span><span class="ansi38-126 ansi48-90">▄</span><span class="ansi38-126 ansi48-89">▄</span><span class="ansi38-125 ansi48-89">▄</span><span class="ansi38-125 ansi48-88">▄</span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>✓ <span class="ansi1 ansi35">Truecolor (16.7 million)</span>    <span class="ansi38-160 ansi48-160">▄</span><span class="ansi38-166 ansi48-166">▄</span><span class="ansi38-172 ansi48-166">▄</span><span class="ansi38-172 ansi48-172">▄</span><span class="ansi38-178 ansi48-178">▄</span><span class="ansi38-184 ansi48-178">▄</span><span class="ansi38-184 ansi48-184">▄</span><span class="ansi38-184 ansi48-148">▄</span><span class="ansi38-148 ansi48-112">▄</span><span class="ansi38-112 ansi48-112">▄</span><span class="ansi38-76 ansi48-76">▄</span><span class="ansi38-76 ansi48-40">▄</span><span class="ansi38-40 ansi48-40">▄</span><span class="ansi38-41 ansi48-41">▄</span><span class="ansi38-42 ansi48-42">▄</span><span class="ansi38-43 ansi48-42">▄</span><span class="ansi38-43 ansi48-43">▄</span><span class="ansi38-44 ansi48-43">▄</span><span class="ansi38-44 ansi48-38">▄</span><span class="ansi38-38 ansi48-38">▄</span><span class="ansi38-38 ansi48-32">▄</span><span class="ansi38-32 ansi48-32">▄</span><span class="ansi38-26 ansi48-26">▄</span><span class="ansi38-20 ansi48-20">▄</span><span class="ansi38-56 ansi48-20">▄</span><span class="ansi38-56 ansi48-56">▄</span><span class="ansi38-92 ansi48-92">▄</span><span class="ansi38-128 ansi48-92">▄</span><span class="ansi38-164 ansi48-128">▄</span><span class="ansi38-164 ansi48-164">▄</span><span class="ansi38-164 ansi48-163">▄</span><span class="ansi38-163 ansi48-163">▄</span><span class="ansi38-162 ansi48-162">▄</span><span class="ansi38-162 ansi48-161">▄</span><span class="ansi38-161 ansi48-161">▄</span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>✓ <span class="ansi1 ansi33">Dumb terminals</span>              <span class="ansi38-203 ansi48-196">▄</span><span class="ansi38-209 ansi48-202">▄</span><span class="ansi38-209 ansi48-208">▄</span><span class="ansi38-215 ansi48-214">▄</span><span class="ansi38-221 ansi48-214">▄</span><span class="ansi38-221 ansi48-220">▄</span><span class="ansi38-227 ansi48-226">▄</span><span class="ansi38-191 ansi48-190">▄</span><span class="ansi38-155 ansi48-154">▄</span><span class="ansi38-155 ansi48-118">▄</span><span class="ansi38-119 ansi48-118">▄</span><span class="ansi38-83 ansi48-82">▄</span><span class="ansi38-83 ansi48-46">▄</span><span class="ansi38-84 ansi48-47">▄</span><span class="ansi38-85 ansi48-48">▄</span><span class="ansi38-85 ansi48-49">▄</span><span class="ansi38-86 ansi48-50">▄</span><span class="ansi38-87 ansi48-51">▄</span><span class="ansi38-87 ansi48-51">▄</span><span class="ansi38-81 ansi48-45">▄</span><span class="ansi38-75 ansi48-39">▄</span><span class="ansi38-75 ansi48-33">▄</span><span class="ansi38-69 ansi48-27">▄</span><span class="ansi38-63 ansi48-21">▄</span><span class="ansi38-63 ansi48-57">▄</span><span class="ansi38-99 ansi48-93">▄</span><span class="ansi38-135 ansi48-93">▄</span><span class="ansi38-135 ansi48-129">▄</span><span class="ansi38-171 ansi48-165">▄</span><span class="ansi38-207 ansi48-201">▄</span><span class="ansi38-206 ansi48-200">▄</span><span class="ansi38-206 ansi48-199">▄</span><span class="ansi38-205 ansi48-199">▄</span><span class="ansi38-204 ansi48-198">▄</span><span class="ansi38-204 ansi48-197">▄</span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>✓ <span class="ansi1 ansi36">Automatic color conversion</span>  <span class="ansi38-210 ansi48-210">▄</span><span class="ansi38-216 ansi48-210">▄</span><span class="ansi38-216 ansi48-216">▄</span><span class="ansi38-222 ansi48-216">▄</span><span class="ansi38-222 ansi48-222">▄</span><span class="ansi38-228 ansi48-228">▄</span><span class="ansi38-228 ansi48-228">▄</span><span class="ansi38-192 ansi48-192">▄</span><span class="ansi38-192 ansi48-192">▄</span><span class="ansi38-192 ansi48-156">▄</span><span class="ansi38-156 ansi48-156">▄</span><span class="ansi38-156 ansi48-120">▄</span><span class="ansi38-120 ansi48-120">▄</span><span class="ansi38-121 ansi48-120">▄</span><span class="ansi38-121 ansi48-121">▄</span><span class="ansi38-122 ansi48-122">▄</span><span class="ansi38-122 ansi48-122">▄</span><span class="ansi38-123 ansi48-123">▄</span><span class="ansi38-123 ansi48-123">▄</span><span class="ansi38-117 ansi48-117">▄</span><span class="ansi38-117 ansi48-117">▄</span><span class="ansi38-111 ansi48-111">▄</span><span class="ansi38-111 ansi48-105">▄</span><span class="ansi38-105 ansi48-105">▄</span><span class="ansi38-141 ansi48-105">▄</span><span class="ansi38-141 ansi48-141">▄</span><span class="ansi38-177 ansi48-141">▄</span><span class="ansi38-177 ansi48-177">▄</span><span class="ansi38-177 ansi48-177">▄</span><span class="ansi38-213 ansi48-213">▄</span><span class="ansi38-213 ansi48-213">▄</span><span class="ansi38-212 ansi48-212">▄</span><span class="ansi38-212 ansi48-211">▄</span><span class="ansi38-211 ansi48-211">▄</span><span class="ansi38-211 ansi48-210">▄</span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>                                                                  </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31"> </span><span class="ansi1 ansi31">   Styles   </span><span class="ansi1 ansi31"> </span>All ansi styles: <span class="ansi1">bold</span>, <span class="ansi2">dim</span>, <span class="ansi3">italic</span>, <span class="ansi4">underline</span>, <span class="ansi9">strikethrough</span>,     </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="inv_background inv_foreground">reverse</span>, and even <span class="ansi5">blink</span>.                                          </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>                                                                  </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31"> </span><span class="ansi1 ansi31">    Text    </span><span class="ansi1 ansi31"> </span>Word wrap text. Justify <span class="ansi32">left</span>, <span class="ansi33">center</span>, <span class="ansi34">right</span> or <span class="ansi31">full</span>.              </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>                                                                  </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi32">Lorem ipsum    </span> <span class="ansi33">  Lorem ipsum  </span> <span class="ansi34">     Lorem ipsum</span> <span class="ansi31">Lorem</span><span class="ansi31">      </span><span class="ansi31">ipsum</span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi32">dolor sit amet,</span> <span class="ansi33">dolor sit amet,</span> <span class="ansi34"> dolor sit amet,</span> <span class="ansi31">dolor</span><span class="ansi31"> </span><span class="ansi31">sit</span><span class="ansi31">  </span><span class="ansi31">amet,</span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi32">consectetur    </span> <span class="ansi33">  consectetur  </span> <span class="ansi34">     consectetur</span> <span class="ansi31">consectetur</span>      </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi32">adipiscing     </span> <span class="ansi33">  adipiscing   </span> <span class="ansi34">adipiscing elit.</span> <span class="ansi31">adipiscing</span><span class="ansi31"> </span><span class="ansi31">elit.</span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi32">elit. Quisque  </span> <span class="ansi33"> elit. Quisque </span> <span class="ansi34">Quisque in metus</span> <span class="ansi31">Quisque</span><span class="ansi31"> </span><span class="ansi31">in</span><span class="ansi31"> </span><span class="ansi31">metus</span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi32">in metus sed   </span> <span class="ansi33"> in metus sed  </span> <span class="ansi34">      sed sapien</span> <span class="ansi31">sed</span><span class="ansi31">       </span><span class="ansi31">sapien</span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi32">sapien         </span> <span class="ansi33">    sapien     </span> <span class="ansi34">       ultricies</span> <span class="ansi31">ultricies</span>        </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi32">ultricies      </span> <span class="ansi33">   ultricies   </span> <span class="ansi34">    pretium a at</span> <span class="ansi31">pretium</span><span class="ansi31">   </span><span class="ansi31">a</span><span class="ansi31">   </span><span class="ansi31">at</span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi32">pretium a at   </span> <span class="ansi33"> pretium a at  </span> <span class="ansi34"> justo. Maecenas</span> <span class="ansi31">justo.</span><span class="ansi31">  </span><span class="ansi31">Maecenas</span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi32">justo. Maecenas</span> <span class="ansi33">justo. Maecenas</span> <span class="ansi34"> luctus velit et</span> <span class="ansi31">luctus</span><span class="ansi31"> </span><span class="ansi31">velit</span><span class="ansi31">  </span><span class="ansi31">et</span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi32">luctus velit et</span> <span class="ansi33">luctus velit et</span> <span class="ansi34"> auctor maximus.</span> <span class="ansi31">auctor maximus.</span>  </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi32">auctor maximus.</span> <span class="ansi33">auctor maximus.</span>                                   </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>                                                                  </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31"> </span><span class="ansi1 ansi31">   Asian    </span><span class="ansi1 ansi31"> </span>🇨🇳  该库支持中文，日文和韩文文本！                                </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31"> </span><span class="ansi1 ansi31">  language  </span><span class="ansi1 ansi31"> </span>🇯🇵                                                                </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31"> </span><span class="ansi1 ansi31">  support   </span><span class="ansi1 ansi31"> </span>ライブラリは中国語、日本語、韓国語のテキストをサポートしています  </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>🇰🇷  이 라이브러리는 중국어, 일본어 및 한국어 텍스트를 지원합니다  </span>
+<span data-ty="" data-ty-delay="2"><span class="ansi1 ansi31">              </span>                                                                  </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31"> </span><span class="ansi1 ansi31">   Markup   </span><span class="ansi1 ansi31"> </span><span class="ansi1 ansi35">Rich</span> supports a simple <span class="ansi3">bbcode</span>-like <span class="ansi1">markup</span> for <span class="ansi33">color</span>, <span class="ansi4">style</span>, and   </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>emoji! 👍 🍎 🐜 🐻 🥖 🚌                                          </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>                                                                  </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31"> </span><span class="ansi1 ansi31">   Tables   </span><span class="ansi1 ansi31"> </span><span class="ansi1"> </span><span class="ansi1 ansi32">Date</span><span class="ansi1">        </span><span class="ansi1"> </span> <span class="ansi1"> </span><span class="ansi1 ansi34">Title</span><span class="ansi1">      </span><span class="ansi1"> </span> <span class="ansi1"> </span><span class="ansi1 ansi36">Production Budget</span><span class="ansi1"> </span> <span class="ansi1"> </span><span class="ansi1">    </span><span class="ansi1 ansi35">Box Office</span><span class="ansi1"> </span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>───────────────────────────────────────────────────────────────── </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi32"> </span><span class="ansi32">Dec 20, 2019</span><span class="ansi32"> </span> <span class="ansi34"> </span><span class="ansi34">Star Wars: </span><span class="ansi34"> </span> <span class="ansi36"> </span><span class="ansi36">     $275,000,000</span><span class="ansi36"> </span> <span class="ansi35"> </span><span class="ansi35">  $375,126,118</span><span class="ansi35"> </span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi32">              </span> <span class="ansi34"> </span><span class="ansi34">The Rise of</span><span class="ansi34"> </span> <span class="ansi36">                   </span> <span class="ansi35">                </span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi32">              </span> <span class="ansi34"> </span><span class="ansi34">Skywalker  </span><span class="ansi34"> </span> <span class="ansi36">                   </span> <span class="ansi35">                </span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi2 ansi32"> </span><span class="ansi2 ansi32">May 25, 2018</span><span class="ansi2 ansi32"> </span> <span class="ansi2 ansi34"> </span><span class="ansi2 ansi34">Solo</span><span class="ansi2 ansi34">: A    </span><span class="ansi2 ansi34"> </span> <span class="ansi2 ansi36"> </span><span class="ansi2 ansi36">     $275,000,000</span><span class="ansi2 ansi36"> </span> <span class="ansi2 ansi35"> </span><span class="ansi2 ansi35">  $393,151,347</span><span class="ansi2 ansi35"> </span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi2 ansi32">              </span> <span class="ansi2 ansi34"> </span><span class="ansi2 ansi34">Star Wars  </span><span class="ansi2 ansi34"> </span> <span class="ansi2 ansi36">                   </span> <span class="ansi2 ansi35">                </span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi2 ansi32">              </span> <span class="ansi2 ansi34"> </span><span class="ansi2 ansi34">Story      </span><span class="ansi2 ansi34"> </span> <span class="ansi2 ansi36">                   </span> <span class="ansi2 ansi35">                </span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi32"> </span><span class="ansi32">Dec 15, 2017</span><span class="ansi32"> </span> <span class="ansi34"> </span><span class="ansi34">Star Wars  </span><span class="ansi34"> </span> <span class="ansi36"> </span><span class="ansi36">     $262,000,000</span><span class="ansi36"> </span> <span class="ansi35"> </span><span class="ansi1 ansi35">$1,332,539,889</span><span class="ansi35"> </span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi32">              </span> <span class="ansi34"> </span><span class="ansi34">Ep. VIII:  </span><span class="ansi34"> </span> <span class="ansi36">                   </span> <span class="ansi35">                </span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi32">              </span> <span class="ansi34"> </span><span class="ansi34">The Last   </span><span class="ansi34"> </span> <span class="ansi36">                   </span> <span class="ansi35">                </span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi32">              </span> <span class="ansi34"> </span><span class="ansi34">Jedi       </span><span class="ansi34"> </span> <span class="ansi36">                   </span> <span class="ansi35">                </span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi2 ansi32"> </span><span class="ansi2 ansi32">May 19, 1999</span><span class="ansi2 ansi32"> </span> <span class="ansi2 ansi34"> </span><span class="ansi2 ansi34">Star Wars  </span><span class="ansi2 ansi34"> </span> <span class="ansi2 ansi36"> </span><span class="ansi2 ansi36">     $115,000,000</span><span class="ansi2 ansi36"> </span> <span class="ansi2 ansi35"> </span><span class="ansi2 ansi35">$1,027,044,677</span><span class="ansi2 ansi35"> </span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi2 ansi32">              </span> <span class="ansi2 ansi34"> </span><span class="ansi2 ansi34">Ep. </span><span class="ansi2 ansi34">I</span><span class="ansi2 ansi34">: </span><span class="ansi2 ansi3 ansi34">The </span><span class="ansi2 ansi34"> </span> <span class="ansi2 ansi36">                   </span> <span class="ansi2 ansi35">                </span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi2 ansi32">              </span> <span class="ansi2 ansi34"> </span><span class="ansi2 ansi3 ansi34">phantom </span><span class="ansi2 ansi34">   </span><span class="ansi2 ansi34"> </span> <span class="ansi2 ansi36">                   </span> <span class="ansi2 ansi35">                </span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi2 ansi32">              </span> <span class="ansi2 ansi34"> </span><span class="ansi2 ansi3 ansi34">Menace</span><span class="ansi2 ansi34">     </span><span class="ansi2 ansi34"> </span> <span class="ansi2 ansi36">                   </span> <span class="ansi2 ansi35">                </span> </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>                                                                  </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31"> </span><span class="ansi1 ansi31">   Syntax   </span><span class="ansi1 ansi31"> </span><span class="ansi1 ansi38-253 ansi48-235">  </span><span class="ansi38-241 ansi48-235"> 1 </span><span class="ansi38-117 ansi48-235">def</span><span class="ansi38-231 ansi48-235"> </span><span class="ansi38-149 ansi48-235">iter_last</span><span class="ansi38-231 ansi48-235">(</span><span class="ansi38-231 ansi48-235">values</span><span class="ansi38-231 ansi48-235">:</span><span class="ansi38-231 ansi48-235"> </span><span class="ansi38-231 ansi48-235">Itera</span>  <span class="ansi1">{</span>                               </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31"> </span><span class="ansi1 ansi31">highlighting</span><span class="ansi1 ansi31"> </span><span class="ansi1 ansi38-253 ansi48-235">  </span><span class="ansi38-241 ansi48-235"> 2 </span><span class="ansi2 ansi38-102 ansi48-235">│   </span><span class="ansi38-222 ansi48-235">"""Iterate and generate</span>  <span class="ansi2 ansi32">│   </span><span class="ansi32">'foo'</span>: <span class="ansi1">[</span>                    </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31"> </span><span class="ansi1 ansi31">     &amp;      </span><span class="ansi1 ansi31"> </span><span class="ansi1 ansi38-253 ansi48-235">  </span><span class="ansi38-241 ansi48-235"> 3 </span><span class="ansi2 ansi38-102 ansi48-235">│   </span><span class="ansi38-231 ansi48-235">iter_values</span><span class="ansi38-231 ansi48-235"> </span><span class="ansi38-204 ansi48-235">=</span><span class="ansi38-231 ansi48-235"> </span><span class="ansi38-231 ansi48-235">iter</span><span class="ansi38-231 ansi48-235">(</span><span class="ansi38-231 ansi48-235">valu</span>  <span class="ansi2 ansi32">│   │   </span><span class="ansi1 ansi36">3.1427</span>,                 </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31"> </span><span class="ansi1 ansi31">   pretty   </span><span class="ansi1 ansi31"> </span><span class="ansi1 ansi38-253 ansi48-235">  </span><span class="ansi38-241 ansi48-235"> 4 </span><span class="ansi2 ansi38-102 ansi48-235">│   </span><span class="ansi38-117 ansi48-235">try</span><span class="ansi38-231 ansi48-235">:</span><span class="ansi48-235">                   </span>  <span class="ansi2 ansi32">│   │   </span><span class="ansi1">(</span>                       </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31"> </span><span class="ansi1 ansi31">  printing  </span><span class="ansi1 ansi31"> </span><span class="ansi1 ansi38-253 ansi48-235">  </span><span class="ansi38-241 ansi48-235"> 5 </span><span class="ansi2 ansi38-102 ansi48-235">│   │   </span><span class="ansi38-231 ansi48-235">previous_value</span><span class="ansi38-231 ansi48-235"> </span><span class="ansi38-204 ansi48-235">=</span><span class="ansi38-231 ansi48-235"> </span><span class="ansi38-231 ansi48-235">ne</span>  <span class="ansi2 ansi32">│   │   │   </span><span class="ansi32">'Paul Atreides'</span>,    </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi1 ansi38-253 ansi48-235">  </span><span class="ansi38-241 ansi48-235"> 6 </span><span class="ansi2 ansi38-102 ansi48-235">│   </span><span class="ansi38-117 ansi48-235">except</span><span class="ansi38-231 ansi48-235"> </span><span class="ansi38-149 ansi48-235">StopIteration</span><span class="ansi38-231 ansi48-235">:</span><span class="ansi48-235">  </span>  <span class="ansi2 ansi32">│   │   │   </span><span class="ansi32">'Vladimir </span>          </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi1 ansi38-253 ansi48-235">  </span><span class="ansi38-241 ansi48-235"> 7 </span><span class="ansi2 ansi38-102 ansi48-235">│   │   </span><span class="ansi38-117 ansi48-235">return</span><span class="ansi48-235">             </span>  <span class="ansi32">Harkonnen'</span>,                     </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi1 ansi38-253 ansi48-235">  </span><span class="ansi38-241 ansi48-235"> 8 </span><span class="ansi2 ansi38-102 ansi48-235">│   </span><span class="ansi38-117 ansi48-235">for</span><span class="ansi38-231 ansi48-235"> </span><span class="ansi38-231 ansi48-235">value</span><span class="ansi38-231 ansi48-235"> </span><span class="ansi38-204 ansi48-235">in</span><span class="ansi38-231 ansi48-235"> </span><span class="ansi38-231 ansi48-235">iter_value</span>  <span class="ansi2 ansi32">│   │   │   </span><span class="ansi32">'Thufir Hawat'</span>      </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi1 ansi38-253 ansi48-235">  </span><span class="ansi38-241 ansi48-235"> 9 </span><span class="ansi2 ansi38-102 ansi48-235">│   │   </span><span class="ansi38-117 ansi48-235">yield</span><span class="ansi38-231 ansi48-235"> </span><span class="ansi38-117 ansi48-235">False</span><span class="ansi38-231 ansi48-235">,</span><span class="ansi38-231 ansi48-235"> </span><span class="ansi38-231 ansi48-235">previo</span>  <span class="ansi2 ansi32">│   │   </span><span class="ansi1">)</span>                       </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi1 ansi38-253 ansi48-235">  </span><span class="ansi38-241 ansi48-235">10 </span><span class="ansi2 ansi38-102 ansi48-235">│   │   </span><span class="ansi38-231 ansi48-235">previous_value</span><span class="ansi38-231 ansi48-235"> </span><span class="ansi38-204 ansi48-235">=</span><span class="ansi38-231 ansi48-235"> </span><span class="ansi38-231 ansi48-235">va</span>  <span class="ansi2 ansi32">│   </span><span class="ansi1">]</span>,                          </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi1 ansi38-253 ansi48-235">  </span><span class="ansi38-241 ansi48-235">11 </span><span class="ansi2 ansi38-102 ansi48-235">│   </span><span class="ansi38-117 ansi48-235">yield</span><span class="ansi38-231 ansi48-235"> </span><span class="ansi38-117 ansi48-235">True</span><span class="ansi38-231 ansi48-235">,</span><span class="ansi38-231 ansi48-235"> </span><span class="ansi38-231 ansi48-235">previous_va</span>  <span class="ansi2 ansi32">│   </span><span class="ansi32">'atomic'</span>: <span class="ansi1">(</span>                 </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>                                  <span class="ansi2 ansi32">│   │   </span><span class="ansi3 ansi91">False</span>,                  </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>                                  <span class="ansi2 ansi32">│   │   </span><span class="ansi3 ansi92">True</span>,                   </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>                                  <span class="ansi2 ansi32">│   │   </span><span class="ansi3 ansi35">None</span>                    </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>                                  <span class="ansi2 ansi32">│   </span><span class="ansi1">)</span>                           </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>                                  <span class="ansi1">}</span>                               </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>                                                                  </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31"> </span><span class="ansi1 ansi31">  Markdown  </span><span class="ansi1 ansi31"> </span><span class="ansi36"># Markdown</span>                        ╔═════════════════════════════╗ </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>                                  ║          <span class="ansi1">Markdown</span>           ║ </span>
+<span data-ty="" data-ty-delay="3"><span class="ansi1 ansi31">              </span><span class="ansi36">Supports much of the *markdown* </span>  ╚═════════════════════════════╝ </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi36">__syntax__!</span>                                                       </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>                                  Supports much of the <span class="ansi3">markdown</span>   </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi36">- Headers</span>                         <span class="ansi1">syntax</span>!                         </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi36">- Basic formatting: **bold**, </span>                                    </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi36">*italic*, `code`</span>                  <span class="ansi1 ansi33"> • </span>Headers                      </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi36">- Block quotes</span>                    <span class="ansi1 ansi33"> • </span>Basic formatting: <span class="ansi1">bold</span>,      </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi36">- Lists, and more...</span>              <span class="ansi1 ansi33">   </span><span class="ansi3">italic</span>, <span class="ansi97 ansi40">code</span>                 </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span><span class="ansi36">    </span>                              <span class="ansi1 ansi33"> • </span>Block quotes                 </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>                                  <span class="ansi1 ansi33"> • </span>Lists, and more...           </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>                                                                  </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31"> </span><span class="ansi1 ansi31">   +more!   </span><span class="ansi1 ansi31"> </span>Progress bars, columns, styled logging handler, tracebacks,       </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>etc...                                                            </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>                                                                  </span>
+<span data-ty="" data-ty-delay="0">rendered in 121.4ms (cold cache)</span>
+<span data-ty="" data-ty-delay="8">rendered in 50.2ms (warm cache)</span>
+<span data-ty="" data-ty-delay="0"><span class="ansi94">╭─</span><span class="ansi94">─────────────────────── </span><span class="ansi1 ansi31">Thanks for trying out Rich!</span><span class="ansi94"> ────────────────────────</span><span class="ansi94">─╮</span></span>
+<span data-ty="" data-ty-delay="0"><span class="ansi94">│</span>                                                                              <span class="ansi94">│</span></span>
+<span data-ty="" data-ty-delay="0"><span class="ansi94">│</span>  We hope you enjoy using      <span class="ansi32">   Textualize</span><span class="ansi32"> </span>]8;id=742514;https://github.com/textualize\<span class="ansi4 ansi34">https://github.com/textualize</span>]8;;\    <span class="ansi94">│</span></span>
+<span data-ty="" data-ty-delay="0"><span class="ansi94">│</span>  Rich!                        <span class="ansi32">              </span>                                 <span class="ansi94">│</span></span>
+<span data-ty="" data-ty-delay="0"><span class="ansi94">│</span>                               <span class="ansi32">Buy devs a ☕</span><span class="ansi32"> </span>]8;id=673708;https://ko-fi.com/textualize\<span class="ansi4 ansi34">https://ko-fi.com/textualize</span>]8;;\     <span class="ansi94">│</span></span>
+<span data-ty="" data-ty-delay="0"><span class="ansi94">│</span>  Rich is maintained with <span class="ansi31">❤</span>    <span class="ansi32">              </span>                                 <span class="ansi94">│</span></span>
+<span data-ty="" data-ty-delay="0"><span class="ansi94">│</span>  by ]8;id=217097;https://www.textualize.io\Textualize.io]8;;\             <span class="ansi32">      Twitter</span><span class="ansi32"> </span>]8;id=660578;https://twitter.com/willmcgugan\<span class="ansi4 ansi34">https://twitter.com/willmcgugan</span>]8;;\  <span class="ansi94">│</span></span>
+<span data-ty="" data-ty-delay="0"><span class="ansi94">│</span>                                                                              <span class="ansi94">│</span></span>
+<span data-ty="" data-ty-delay="0"><span class="ansi94">│</span>  - Will McGugan                                                              <span class="ansi94">│</span></span>
+<span data-ty="" data-ty-delay="0"><span class="ansi94">│</span>                                                                              <span class="ansi94">│</span></span>
+<span data-ty="" data-ty-delay="18"><span class="ansi94">╰──────────────────────────────────────────────────────────────────────────────╯</span></span>
+<span data-ty="" data-ty-delay="0"></span>
+</pre></section>
+
+
+          </article>
+        </div>
+      </div>
+    </main>
+  </div>
+  <footer class="md-footer">
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+          
+            <a href="echo.html" title="Echo Tests"
+               class="md-flex md-footer-nav__link md-footer-nav__link--prev"
+               rel="prev">
+              <div class="md-flex__cell md-flex__cell--shrink">
+                <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+              </div>
+              <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+                <span class="md-flex__ellipsis">
+                  <span
+                      class="md-footer-nav__direction"> Previous </span> Echo Tests </span>
+              </div>
+            </a>
+          
+          
+            <a href="../api/modules.html" title="sphinx_terminhtml"
+               class="md-flex md-footer-nav__link md-footer-nav__link--next"
+               rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span
+                class="md-flex__ellipsis"> <span
+                class="md-footer-nav__direction"> Next </span> sphinx_terminhtml </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink"><i
+                class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          
+        </a>
+        
+      </nav>
+    </div>
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid">
+        <div class="md-footer-copyright">
+          <div class="md-footer-copyright__highlight">
+              &#169; Copyright 2022, Nick DeRobertis.
+              
+          </div>
+            Created using
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+             and
+            <a href="https://github.com/bashtage/sphinx-material/">Material for
+              Sphinx</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../_static/javascripts/application.js"></script>
+  <script>app.initialize({version: "1.0.4", url: {base: ".."}})</script>
+  </body>
+</html>
