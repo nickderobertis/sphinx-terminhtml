@@ -19,6 +19,7 @@ RunTerminalOptions = TypedDict(
         "cwd": Optional[str],
         "cwd-relative-to": Optional[CWDRelativeTo],
         "disable-cache": Optional[bool],
+        "echo": Optional[bool],
     },
     total=False,
 )
