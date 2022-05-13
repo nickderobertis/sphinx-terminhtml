@@ -5,4 +5,5 @@
 cache
 cwd
 echo
+term
 ```
