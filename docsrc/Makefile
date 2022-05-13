@@ -30,6 +30,7 @@ github:
 	@./binder_requirements.sh
 	@./nb-examples.sh
 	@./download-logo.sh
+	@python create_cwd_test_md.py
 	@make doctest
 	@make autodoc
 	@make html
