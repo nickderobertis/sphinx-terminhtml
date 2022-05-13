@@ -5,6 +5,16 @@
 
 # Welcome to Sphinx TerminHTML documentation!
 
+```{terminhtml}
+---
+prompt-matchers: "['\\[0m: ']"
+input: "Nick DeRobertis"
+cwd: ..
+echo:
+---
+python -m terminhtml.demo_output
+```
+
 ```{include} ../../README.md
 ```
 
@@ -17,9 +27,8 @@ For more information on getting started, take a look at the tutorial and example
 ## Tutorial and Examples
 
 ```{toctree}
-
 tutorial
-auto_examples/index
+tests/index
 ```
 
 ## API Documentation

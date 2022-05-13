@@ -47,7 +47,7 @@
   
   
   
-    <title>sphinx_terminhtml package &#8212; sphinx-terminhtml 1.2.0 documentation</title>
+    <title>sphinx_terminhtml package &#8212; sphinx-terminhtml 1.3.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/material.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
@@ -92,7 +92,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex navheader">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../index.html" title="sphinx-terminhtml 1.2.0 documentation"
+        <a href="../index.html" title="sphinx-terminhtml 1.3.0 documentation"
            class="md-header-nav__button md-logo">
           
             <i class="md-icon">&#xe869</i>
@@ -178,7 +178,7 @@
   <nav class="md-tabs" data-md-component="tabs">
     <div class="md-tabs__inner md-grid">
       <ul class="md-tabs__list">
-          <li class="md-tabs__item"><a href="../index.html" class="md-tabs__link">sphinx-terminhtml 1.2.0 documentation</a></li>
+          <li class="md-tabs__item"><a href="../index.html" class="md-tabs__link">sphinx-terminhtml 1.3.0 documentation</a></li>
           <li class="md-tabs__item"><a href="modules.html" class="md-tabs__link">sphinx_terminhtml</a></li>
       </ul>
     </div>
@@ -191,13 +191,13 @@
               <div class="md-sidebar__inner">
                 <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="../index.html" title="sphinx-terminhtml 1.2.0 documentation" class="md-nav__button md-logo">
+    <a href="../index.html" title="sphinx-terminhtml 1.3.0 documentation" class="md-nav__button md-logo">
       
         <i class="md-icon">&#xe869</i>
       
     </a>
     <a href="../index.html"
-       title="sphinx-terminhtml 1.2.0 documentation">sphinx-terminhtml</a>
+       title="sphinx-terminhtml 1.3.0 documentation">sphinx-terminhtml</a>
   </label>
     <div class="md-nav__source">
       <a href="https://github.com/nickderobertis/sphinx-terminhtml" title="Go to repository" class="md-source" data-md-source="github">
@@ -228,7 +228,7 @@
     <li class="md-nav__item">
     
     
-      <a href="../auto_examples/index.html" class="md-nav__link">This is my gallery</a>
+      <a href="../tests/index.html" class="md-nav__link">Tests</a>
       
     
     </li>
@@ -542,7 +542,7 @@
 </dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sphinx_terminhtml.directives.TerminHTMLDirective.option_spec">
-<span class="sig-name descname"><span class="pre">option_spec</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'allow-exceptions':</span> <span class="pre">&lt;function</span> <span class="pre">flag&gt;,</span> <span class="pre">'cwd':</span> <span class="pre">&lt;function</span> <span class="pre">unchanged&gt;,</span> <span class="pre">'cwd-relative-to':</span> <span class="pre">&lt;function</span> <span class="pre">_validate_cwd_relative_to&gt;,</span> <span class="pre">'disable-cache':</span> <span class="pre">&lt;function</span> <span class="pre">flag&gt;,</span> <span class="pre">'input':</span> <span class="pre">&lt;function</span> <span class="pre">_get_list&gt;,</span> <span class="pre">'prompt-matchers':</span> <span class="pre">&lt;function</span> <span class="pre">_get_list&gt;,</span> <span class="pre">'setup':</span> <span class="pre">&lt;function</span> <span class="pre">unchanged&gt;}</span></em><a class="headerlink" href="#sphinx_terminhtml.directives.TerminHTMLDirective.option_spec" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">option_spec</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'allow-exceptions':</span> <span class="pre">&lt;function</span> <span class="pre">flag&gt;,</span> <span class="pre">'cwd':</span> <span class="pre">&lt;function</span> <span class="pre">unchanged&gt;,</span> <span class="pre">'cwd-relative-to':</span> <span class="pre">&lt;function</span> <span class="pre">_validate_cwd_relative_to&gt;,</span> <span class="pre">'disable-cache':</span> <span class="pre">&lt;function</span> <span class="pre">flag&gt;,</span> <span class="pre">'echo':</span> <span class="pre">&lt;function</span> <span class="pre">flag&gt;,</span> <span class="pre">'input':</span> <span class="pre">&lt;function</span> <span class="pre">_get_list&gt;,</span> <span class="pre">'prompt-matchers':</span> <span class="pre">&lt;function</span> <span class="pre">_get_list&gt;,</span> <span class="pre">'setup':</span> <span class="pre">&lt;function</span> <span class="pre">unchanged&gt;}</span></em><a class="headerlink" href="#sphinx_terminhtml.directives.TerminHTMLDirective.option_spec" title="Permalink to this definition">¶</a></dt>
 <dd><p>Mapping of option names to validator functions.</p>
 </dd></dl>
 <dl class="py attribute">
@@ -666,6 +666,10 @@
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sphinx_terminhtml.options.RunTerminalOptions.cwd">
 <span class="sig-name descname"><span class="pre">cwd</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#sphinx_terminhtml.options.RunTerminalOptions.cwd" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sphinx_terminhtml.options.RunTerminalOptions.echo">
+<span class="sig-name descname"><span class="pre">echo</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.10)"><span class="pre">bool</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#sphinx_terminhtml.options.RunTerminalOptions.echo" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sphinx_terminhtml.options.RunTerminalOptions.input">
