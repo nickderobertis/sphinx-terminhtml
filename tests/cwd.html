@@ -69,7 +69,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Echo Tests" href="echo.html" />
-    <link rel="prev" title="Cache Tests" href="cache.html" />
+    <link rel="prev" title="Force Color Tests" href="color.html" />
   
    
 
@@ -241,6 +241,13 @@
     <li class="md-nav__item">
     
     
+      <a href="color.html" class="md-nav__link">Force Color Tests</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     <label class="md-nav__link md-nav__link--active" for="__toc"> CWD Tests </label>
     
@@ -310,77 +317,78 @@
   <section id="cwd-tests">
 <h1 id="tests-cwd--page-root">CWD Tests<a class="headerlink" href="#tests-cwd--page-root" title="Permalink to this headline">¶</a></h1>
 <pre class="terminhtml">
-    <span data-ty="" data-ty-delay="50">$ echo 'cwd .'</span>
+    <span data-ty="" data-ty-delay="41">$ echo 'cwd .'</span>
 <span data-ty="" data-ty-delay="0">cwd .</span>
 <span data-ty="" data-ty-delay="0"></span>
-<span data-ty="" data-ty-delay="48">$ ls -l</span>
+<span data-ty="" data-ty-delay="43">$ ls -l</span>
 <span data-ty="" data-ty-delay="0">total 48</span>
-<span data-ty="" data-ty-delay="0">-rw-r--r-- 1 runner docker 1070 May 13 15:19 Makefile</span>
-<span data-ty="" data-ty-delay="0">drwxr-xr-x 3 runner docker 4096 May 13 15:19 apidoc</span>
-<span data-ty="" data-ty-delay="0">-rwxr-xr-x 1 runner docker  564 May 13 15:19 autobuild.sh</span>
-<span data-ty="" data-ty-delay="0">-rwxr-xr-x 1 runner docker  139 May 13 15:19 binder_requirements.sh</span>
-<span data-ty="" data-ty-delay="0">drwxr-xr-x 4 runner docker 4096 May 13 15:21 build</span>
-<span data-ty="" data-ty-delay="0">-rw-r--r-- 1 runner docker 1245 May 13 15:19 create_cwd_test_md.py</span>
-<span data-ty="" data-ty-delay="0">-rwxr-xr-x 1 runner docker  662 May 13 15:19 dev-server.sh</span>
-<span data-ty="" data-ty-delay="0">drwxr-xr-x 2 runner docker 4096 May 13 15:19 directives</span>
-<span data-ty="" data-ty-delay="0">-rwxr-xr-x 1 runner docker   47 May 13 15:19 download-logo.sh</span>
-<span data-ty="" data-ty-delay="0">-rw-r--r-- 1 runner docker  776 May 13 15:19 make.bat</span>
-<span data-ty="" data-ty-delay="0">-rwxr-xr-x 1 runner docker  142 May 13 15:19 nb-examples.sh</span>
-<span data-ty="" data-ty-delay="0">drwxr-xr-x 6 runner docker 4096 May 13 15:21 source</span>
+<span data-ty="" data-ty-delay="0">-rw-r--r-- 1 runner docker 1070 May 14 02:16 Makefile</span>
+<span data-ty="" data-ty-delay="0">drwxr-xr-x 3 runner docker 4096 May 14 02:16 apidoc</span>
+<span data-ty="" data-ty-delay="0">-rwxr-xr-x 1 runner docker  564 May 14 02:16 autobuild.sh</span>
+<span data-ty="" data-ty-delay="0">-rwxr-xr-x 1 runner docker  139 May 14 02:16 binder_requirements.sh</span>
+<span data-ty="" data-ty-delay="0">drwxr-xr-x 4 runner docker 4096 May 14 02:18 build</span>
+<span data-ty="" data-ty-delay="0">-rw-r--r-- 1 runner docker 1245 May 14 02:16 create_cwd_test_md.py</span>
+<span data-ty="" data-ty-delay="0">-rwxr-xr-x 1 runner docker  662 May 14 02:16 dev-server.sh</span>
+<span data-ty="" data-ty-delay="0">drwxr-xr-x 2 runner docker 4096 May 14 02:16 directives</span>
+<span data-ty="" data-ty-delay="0">-rwxr-xr-x 1 runner docker   47 May 14 02:16 download-logo.sh</span>
+<span data-ty="" data-ty-delay="0">-rw-r--r-- 1 runner docker  776 May 14 02:16 make.bat</span>
+<span data-ty="" data-ty-delay="0">-rwxr-xr-x 1 runner docker  142 May 14 02:16 nb-examples.sh</span>
+<span data-ty="" data-ty-delay="0">drwxr-xr-x 6 runner docker 4096 May 14 02:18 source</span>
 <span data-ty="" data-ty-delay="0"></span>
 </pre><pre class="terminhtml">
-    <span data-ty="" data-ty-delay="48">$ echo 'cwd ., cwd-relative-to: cwd'</span>
+    <span data-ty="" data-ty-delay="40">$ echo 'cwd ., cwd-relative-to: cwd'</span>
 <span data-ty="" data-ty-delay="0">cwd ., cwd-relative-to: cwd</span>
 <span data-ty="" data-ty-delay="0"></span>
-<span data-ty="" data-ty-delay="55">$ ls -l</span>
+<span data-ty="" data-ty-delay="43">$ ls -l</span>
 <span data-ty="" data-ty-delay="0">total 48</span>
-<span data-ty="" data-ty-delay="0">-rw-r--r-- 1 runner docker 1070 May 13 15:19 Makefile</span>
-<span data-ty="" data-ty-delay="0">drwxr-xr-x 3 runner docker 4096 May 13 15:19 apidoc</span>
-<span data-ty="" data-ty-delay="0">-rwxr-xr-x 1 runner docker  564 May 13 15:19 autobuild.sh</span>
-<span data-ty="" data-ty-delay="0">-rwxr-xr-x 1 runner docker  139 May 13 15:19 binder_requirements.sh</span>
-<span data-ty="" data-ty-delay="0">drwxr-xr-x 4 runner docker 4096 May 13 15:21 build</span>
-<span data-ty="" data-ty-delay="0">-rw-r--r-- 1 runner docker 1245 May 13 15:19 create_cwd_test_md.py</span>
-<span data-ty="" data-ty-delay="0">-rwxr-xr-x 1 runner docker  662 May 13 15:19 dev-server.sh</span>
-<span data-ty="" data-ty-delay="0">drwxr-xr-x 2 runner docker 4096 May 13 15:19 directives</span>
-<span data-ty="" data-ty-delay="0">-rwxr-xr-x 1 runner docker   47 May 13 15:19 download-logo.sh</span>
-<span data-ty="" data-ty-delay="0">-rw-r--r-- 1 runner docker  776 May 13 15:19 make.bat</span>
-<span data-ty="" data-ty-delay="0">-rwxr-xr-x 1 runner docker  142 May 13 15:19 nb-examples.sh</span>
-<span data-ty="" data-ty-delay="0">drwxr-xr-x 6 runner docker 4096 May 13 15:21 source</span>
+<span data-ty="" data-ty-delay="0">-rw-r--r-- 1 runner docker 1070 May 14 02:16 Makefile</span>
+<span data-ty="" data-ty-delay="0">drwxr-xr-x 3 runner docker 4096 May 14 02:16 apidoc</span>
+<span data-ty="" data-ty-delay="0">-rwxr-xr-x 1 runner docker  564 May 14 02:16 autobuild.sh</span>
+<span data-ty="" data-ty-delay="0">-rwxr-xr-x 1 runner docker  139 May 14 02:16 binder_requirements.sh</span>
+<span data-ty="" data-ty-delay="0">drwxr-xr-x 4 runner docker 4096 May 14 02:18 build</span>
+<span data-ty="" data-ty-delay="0">-rw-r--r-- 1 runner docker 1245 May 14 02:16 create_cwd_test_md.py</span>
+<span data-ty="" data-ty-delay="0">-rwxr-xr-x 1 runner docker  662 May 14 02:16 dev-server.sh</span>
+<span data-ty="" data-ty-delay="0">drwxr-xr-x 2 runner docker 4096 May 14 02:16 directives</span>
+<span data-ty="" data-ty-delay="0">-rwxr-xr-x 1 runner docker   47 May 14 02:16 download-logo.sh</span>
+<span data-ty="" data-ty-delay="0">-rw-r--r-- 1 runner docker  776 May 14 02:16 make.bat</span>
+<span data-ty="" data-ty-delay="0">-rwxr-xr-x 1 runner docker  142 May 14 02:16 nb-examples.sh</span>
+<span data-ty="" data-ty-delay="0">drwxr-xr-x 6 runner docker 4096 May 14 02:18 source</span>
 <span data-ty="" data-ty-delay="0"></span>
 </pre><pre class="terminhtml">
-    <span data-ty="" data-ty-delay="45">$ echo 'cwd ., cwd-relative-to: current_source'</span>
+    <span data-ty="" data-ty-delay="41">$ echo 'cwd ., cwd-relative-to: current_source'</span>
 <span data-ty="" data-ty-delay="0">cwd ., cwd-relative-to: current_source</span>
 <span data-ty="" data-ty-delay="0"></span>
-<span data-ty="" data-ty-delay="46">$ ls -l</span>
-<span data-ty="" data-ty-delay="0">total 20</span>
-<span data-ty="" data-ty-delay="0">-rw-r--r-- 1 runner docker  92 May 13 15:19 cache.md</span>
-<span data-ty="" data-ty-delay="0">-rw-r--r-- 1 runner docker 609 May 13 15:21 cwd.md</span>
-<span data-ty="" data-ty-delay="0">-rw-r--r-- 1 runner docker 207 May 13 15:19 echo.md</span>
-<span data-ty="" data-ty-delay="0">-rw-r--r-- 1 runner docker  46 May 13 15:19 index.md</span>
-<span data-ty="" data-ty-delay="0">-rw-r--r-- 1 runner docker 150 May 13 15:19 term.md</span>
+<span data-ty="" data-ty-delay="43">$ ls -l</span>
+<span data-ty="" data-ty-delay="0">total 24</span>
+<span data-ty="" data-ty-delay="0">-rw-r--r-- 1 runner docker  92 May 14 02:16 cache.md</span>
+<span data-ty="" data-ty-delay="0">-rw-r--r-- 1 runner docker 176 May 14 02:16 color.md</span>
+<span data-ty="" data-ty-delay="0">-rw-r--r-- 1 runner docker 609 May 14 02:18 cwd.md</span>
+<span data-ty="" data-ty-delay="0">-rw-r--r-- 1 runner docker 207 May 14 02:16 echo.md</span>
+<span data-ty="" data-ty-delay="0">-rw-r--r-- 1 runner docker  52 May 14 02:16 index.md</span>
+<span data-ty="" data-ty-delay="0">-rw-r--r-- 1 runner docker 150 May 14 02:16 term.md</span>
 <span data-ty="" data-ty-delay="0"></span>
 </pre><pre class="terminhtml">
-    <span data-ty="" data-ty-delay="49">$ echo 'cwd ., cwd-relative-to: sources_root'</span>
+    <span data-ty="" data-ty-delay="40">$ echo 'cwd ., cwd-relative-to: sources_root'</span>
 <span data-ty="" data-ty-delay="0">cwd ., cwd-relative-to: sources_root</span>
 <span data-ty="" data-ty-delay="0"></span>
-<span data-ty="" data-ty-delay="47">$ ls -l</span>
+<span data-ty="" data-ty-delay="43">$ ls -l</span>
 <span data-ty="" data-ty-delay="0">total 36</span>
-<span data-ty="" data-ty-delay="0">drwxr-xr-x 3 runner docker 4096 May 13 15:21 _static</span>
-<span data-ty="" data-ty-delay="0">drwxr-xr-x 2 runner docker 4096 May 13 15:21 auto_examples</span>
-<span data-ty="" data-ty-delay="0">drwxr-xr-x 2 runner docker 4096 May 13 15:21 binder</span>
-<span data-ty="" data-ty-delay="0">-rw-r--r-- 1 runner docker 9407 May 13 15:19 conf.py</span>
-<span data-ty="" data-ty-delay="0">-rw-r--r-- 1 runner docker  756 May 13 15:19 index.md</span>
-<span data-ty="" data-ty-delay="0">drwxr-xr-x 2 runner docker 4096 May 13 15:21 tests</span>
-<span data-ty="" data-ty-delay="0">-rw-r--r-- 1 runner docker  251 May 13 15:19 tutorial.rst</span>
+<span data-ty="" data-ty-delay="0">drwxr-xr-x 3 runner docker 4096 May 14 02:18 _static</span>
+<span data-ty="" data-ty-delay="0">drwxr-xr-x 2 runner docker 4096 May 14 02:18 auto_examples</span>
+<span data-ty="" data-ty-delay="0">drwxr-xr-x 2 runner docker 4096 May 14 02:18 binder</span>
+<span data-ty="" data-ty-delay="0">-rw-r--r-- 1 runner docker 9407 May 14 02:16 conf.py</span>
+<span data-ty="" data-ty-delay="0">-rw-r--r-- 1 runner docker  756 May 14 02:16 index.md</span>
+<span data-ty="" data-ty-delay="0">drwxr-xr-x 2 runner docker 4096 May 14 02:18 tests</span>
+<span data-ty="" data-ty-delay="0">-rw-r--r-- 1 runner docker  251 May 14 02:16 tutorial.rst</span>
 <span data-ty="" data-ty-delay="0"></span>
 </pre><pre class="terminhtml">
-    <span data-ty="" data-ty-delay="47">$ echo 'cwd absolute, cwd-relative-to: sources_root'</span>
+    <span data-ty="" data-ty-delay="41">$ echo 'cwd absolute, cwd-relative-to: sources_root'</span>
 <span data-ty="" data-ty-delay="0">cwd absolute, cwd-relative-to: sources_root</span>
 <span data-ty="" data-ty-delay="0"></span>
-<span data-ty="" data-ty-delay="46">$ ls -l</span>
+<span data-ty="" data-ty-delay="43">$ ls -l</span>
 <span data-ty="" data-ty-delay="0">total 4</span>
-<span data-ty="" data-ty-delay="0">-rw-r--r-- 1 runner docker   0 May 13 15:19 __init__.py</span>
-<span data-ty="" data-ty-delay="0">-rw-r--r-- 1 runner docker 450 May 13 15:19 auto_summary.py</span>
+<span data-ty="" data-ty-delay="0">-rw-r--r-- 1 runner docker   0 May 14 02:16 __init__.py</span>
+<span data-ty="" data-ty-delay="0">-rw-r--r-- 1 runner docker 450 May 14 02:16 auto_summary.py</span>
 <span data-ty="" data-ty-delay="0"></span>
 </pre></section>
 
@@ -394,7 +402,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
           
-            <a href="cache.html" title="Cache Tests"
+            <a href="color.html" title="Force Color Tests"
                class="md-flex md-footer-nav__link md-footer-nav__link--prev"
                rel="prev">
               <div class="md-flex__cell md-flex__cell--shrink">
@@ -403,7 +411,7 @@
               <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
                 <span class="md-flex__ellipsis">
                   <span
-                      class="md-footer-nav__direction"> Previous </span> Cache Tests </span>
+                      class="md-footer-nav__direction"> Previous </span> Force Color Tests </span>
               </div>
             </a>
           

@@ -47,7 +47,7 @@
   
   
   
-    <title>Terminal tests &#8212; sphinx-terminhtml 1.3.0 documentation</title>
+    <title>Force Color Tests &#8212; sphinx-terminhtml 1.3.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/material.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
@@ -65,11 +65,11 @@
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/@terminhtml-bootstrap.umd.js"></script>
     <script src="../_static/@terminhtml-bootstrap.umd.js.map"></script>
-    <link rel="canonical" href="https://nickderobertis.github.io/sphinx-terminhtml/tests/term.html" />
+    <link rel="canonical" href="https://nickderobertis.github.io/sphinx-terminhtml/tests/color.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="sphinx_terminhtml" href="../api/modules.html" />
-    <link rel="prev" title="Echo Tests" href="echo.html" />
+    <link rel="next" title="CWD Tests" href="cwd.html" />
+    <link rel="prev" title="Cache Tests" href="cache.html" />
   
    
 
@@ -88,7 +88,7 @@
   <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer">
   <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search">
   <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-  <a href="#tests/term" tabindex="1" class="md-skip"> Skip to content </a>
+  <a href="#tests/color" tabindex="1" class="md-skip"> Skip to content </a>
   <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
     <div class="md-flex navheader">
@@ -106,7 +106,7 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           <span class="md-header-nav__topic">sphinx-terminhtml</span>
-          <span class="md-header-nav__topic"> Terminal tests </span>
+          <span class="md-header-nav__topic"> Force Color Tests </span>
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
@@ -241,7 +241,19 @@
     <li class="md-nav__item">
     
     
-      <a href="color.html" class="md-nav__link">Force Color Tests</a>
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    <label class="md-nav__link md-nav__link--active" for="__toc"> Force Color Tests </label>
+    
+      <a href="#" class="md-nav__link md-nav__link--active">Force Color Tests</a>
+      
+        
+<nav class="md-nav md-nav--secondary">
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+<li class="md-nav__item"><a class="md-nav__extra_link" href="../_sources/tests/color.md.txt">Show Source</a> </li>
+
+  </ul>
+</nav>
       
     
     </li>
@@ -262,19 +274,7 @@
     <li class="md-nav__item">
     
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    <label class="md-nav__link md-nav__link--active" for="__toc"> Terminal tests </label>
-    
-      <a href="#" class="md-nav__link md-nav__link--active">Terminal tests</a>
-      
-        
-<nav class="md-nav md-nav--secondary">
-  <ul class="md-nav__list" data-md-scrollfix="">
-    
-<li class="md-nav__item"><a class="md-nav__extra_link" href="../_sources/tests/term.md.txt">Show Source</a> </li>
-
-  </ul>
-</nav>
+      <a href="term.html" class="md-nav__link">Terminal tests</a>
       
     
     </li></ul>
@@ -301,7 +301,7 @@
 <nav class="md-nav md-nav--secondary">
   <ul class="md-nav__list" data-md-scrollfix="">
     
-<li class="md-nav__item"><a class="md-nav__extra_link" href="../_sources/tests/term.md.txt">Show Source</a> </li>
+<li class="md-nav__item"><a class="md-nav__extra_link" href="../_sources/tests/color.md.txt">Show Source</a> </li>
 
 <li id="searchbox" class="md-nav__item"></li>
 
@@ -314,17 +314,11 @@
         <div class="md-content">
           <article class="md-content__inner md-typeset" role="main">
             
-  <section id="terminal-tests">
-<h1 id="tests-term--page-root">Terminal tests<a class="headerlink" href="#tests-term--page-root" title="Permalink to this headline">¶</a></h1>
+  <section id="force-color-tests">
+<h1 id="tests-color--page-root">Force Color Tests<a class="headerlink" href="#tests-color--page-root" title="Permalink to this headline">¶</a></h1>
 <pre class="terminhtml">
-    <span data-ty="" data-ty-delay="40">$ echo $TERM</span>
-<span data-ty="" data-ty-delay="0">xterm-256color</span>
-<span data-ty="" data-ty-delay="0"></span>
-</pre><pre class="terminhtml">
-    <span data-ty="" data-ty-delay="40">$ export TERM=xterm-256color</span>
-<span data-ty="" data-ty-delay="0"></span>
-<span data-ty="" data-ty-delay="42">$ echo $TERM</span>
-<span data-ty="" data-ty-delay="0">xterm-256color</span>
+    <span data-ty="" data-ty-delay="40">$ echo 'Default, force color'</span>
+<span data-ty="" data-ty-delay="0">Default, force color</span>
 <span data-ty="" data-ty-delay="0"></span>
 <span data-ty="" data-ty-delay="345">$ python -m rich</span>
 <span data-ty="" data-ty-delay="0"><span class="ansi3">                                 Rich features                                  </span></span>
@@ -357,7 +351,7 @@
 <span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31"> </span><span class="ansi1 ansi31">  language  </span><span class="ansi1 ansi31"> </span>🇯🇵                                                                </span>
 <span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31"> </span><span class="ansi1 ansi31">  support   </span><span class="ansi1 ansi31"> </span>ライブラリは中国語、日本語、韓国語のテキストをサポートしています  </span>
 <span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>🇰🇷  이 라이브러리는 중국어, 일본어 및 한국어 텍스트를 지원합니다  </span>
-<span data-ty="" data-ty-delay="2"><span class="ansi1 ansi31">              </span>                                                                  </span>
+<span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>                                                                  </span>
 <span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31"> </span><span class="ansi1 ansi31">   Markup   </span><span class="ansi1 ansi31"> </span><span class="ansi1 ansi35">Rich</span> supports a simple <span class="ansi3">bbcode</span>-like <span class="ansi1">markup</span> for <span class="ansi33">color</span>, <span class="ansi4">style</span>, and   </span>
 <span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>emoji! 👍 🍎 🐜 🐻 🥖 🚌                                          </span>
 <span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>                                                                  </span>
@@ -411,19 +405,122 @@
 <span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31"> </span><span class="ansi1 ansi31">   +more!   </span><span class="ansi1 ansi31"> </span>Progress bars, columns, styled logging handler, tracebacks,       </span>
 <span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>etc...                                                            </span>
 <span data-ty="" data-ty-delay="0"><span class="ansi1 ansi31">              </span>                                                                  </span>
-<span data-ty="" data-ty-delay="0">rendered in 89.7ms (cold cache)</span>
-<span data-ty="" data-ty-delay="1">rendered in 37.7ms (warm cache)</span>
+<span data-ty="" data-ty-delay="0">rendered in 90.5ms (cold cache)</span>
+<span data-ty="" data-ty-delay="3">rendered in 37.6ms (warm cache)</span>
 <span data-ty="" data-ty-delay="0"><span class="ansi94">╭─</span><span class="ansi94">─────────────────────── </span><span class="ansi1 ansi31">Thanks for trying out Rich!</span><span class="ansi94"> ────────────────────────</span><span class="ansi94">─╮</span></span>
 <span data-ty="" data-ty-delay="0"><span class="ansi94">│</span>                                                                              <span class="ansi94">│</span></span>
-<span data-ty="" data-ty-delay="0"><span class="ansi94">│</span>  We hope you enjoy using      <span class="ansi32">   Textualize</span><span class="ansi32"> </span>]8;id=278315;https://github.com/textualize\<span class="ansi4 ansi34">https://github.com/textualize</span>]8;;\    <span class="ansi94">│</span></span>
+<span data-ty="" data-ty-delay="0"><span class="ansi94">│</span>  We hope you enjoy using      <span class="ansi32">   Textualize</span><span class="ansi32"> </span>]8;id=825670;https://github.com/textualize\<span class="ansi4 ansi34">https://github.com/textualize</span>]8;;\    <span class="ansi94">│</span></span>
 <span data-ty="" data-ty-delay="0"><span class="ansi94">│</span>  Rich!                        <span class="ansi32">              </span>                                 <span class="ansi94">│</span></span>
-<span data-ty="" data-ty-delay="0"><span class="ansi94">│</span>                               <span class="ansi32">Buy devs a ☕</span><span class="ansi32"> </span>]8;id=206661;https://ko-fi.com/textualize\<span class="ansi4 ansi34">https://ko-fi.com/textualize</span>]8;;\     <span class="ansi94">│</span></span>
+<span data-ty="" data-ty-delay="0"><span class="ansi94">│</span>                               <span class="ansi32">Buy devs a ☕</span><span class="ansi32"> </span>]8;id=940131;https://ko-fi.com/textualize\<span class="ansi4 ansi34">https://ko-fi.com/textualize</span>]8;;\     <span class="ansi94">│</span></span>
 <span data-ty="" data-ty-delay="0"><span class="ansi94">│</span>  Rich is maintained with <span class="ansi31">❤</span>    <span class="ansi32">              </span>                                 <span class="ansi94">│</span></span>
-<span data-ty="" data-ty-delay="0"><span class="ansi94">│</span>  by ]8;id=177476;https://www.textualize.io\Textualize.io]8;;\             <span class="ansi32">      Twitter</span><span class="ansi32"> </span>]8;id=588231;https://twitter.com/willmcgugan\<span class="ansi4 ansi34">https://twitter.com/willmcgugan</span>]8;;\  <span class="ansi94">│</span></span>
+<span data-ty="" data-ty-delay="0"><span class="ansi94">│</span>  by ]8;id=5897;https://www.textualize.io\Textualize.io]8;;\             <span class="ansi32">      Twitter</span><span class="ansi32"> </span>]8;id=132197;https://twitter.com/willmcgugan\<span class="ansi4 ansi34">https://twitter.com/willmcgugan</span>]8;;\  <span class="ansi94">│</span></span>
 <span data-ty="" data-ty-delay="0"><span class="ansi94">│</span>                                                                              <span class="ansi94">│</span></span>
 <span data-ty="" data-ty-delay="0"><span class="ansi94">│</span>  - Will McGugan                                                              <span class="ansi94">│</span></span>
 <span data-ty="" data-ty-delay="0"><span class="ansi94">│</span>                                                                              <span class="ansi94">│</span></span>
-<span data-ty="" data-ty-delay="16"><span class="ansi94">╰──────────────────────────────────────────────────────────────────────────────╯</span></span>
+<span data-ty="" data-ty-delay="15"><span class="ansi94">╰──────────────────────────────────────────────────────────────────────────────╯</span></span>
+<span data-ty="" data-ty-delay="0"></span>
+</pre><pre class="terminhtml">
+    <span data-ty="" data-ty-delay="41">$ echo 'No force color in options'</span>
+<span data-ty="" data-ty-delay="0">No force color in options</span>
+<span data-ty="" data-ty-delay="0"></span>
+<span data-ty="" data-ty-delay="340">$ python -m rich</span>
+<span data-ty="" data-ty-delay="0">                                 Rich features                                  </span>
+<span data-ty="" data-ty-delay="0">                                                                                </span>
+<span data-ty="" data-ty-delay="0">    Colors    ✓ 4-bit color                 ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄ </span>
+<span data-ty="" data-ty-delay="0">              ✓ 8-bit color                 ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄ </span>
+<span data-ty="" data-ty-delay="0">              ✓ Truecolor (16.7 million)    ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄ </span>
+<span data-ty="" data-ty-delay="0">              ✓ Dumb terminals              ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄ </span>
+<span data-ty="" data-ty-delay="0">              ✓ Automatic color conversion  ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄ </span>
+<span data-ty="" data-ty-delay="0">                                                                                </span>
+<span data-ty="" data-ty-delay="0">    Styles    All ansi styles: bold, dim, italic, underline, strikethrough,     </span>
+<span data-ty="" data-ty-delay="0">              reverse, and even blink.                                          </span>
+<span data-ty="" data-ty-delay="0">                                                                                </span>
+<span data-ty="" data-ty-delay="0">     Text     Word wrap text. Justify left, center, right or full.              </span>
+<span data-ty="" data-ty-delay="0">                                                                                </span>
+<span data-ty="" data-ty-delay="0">              Lorem ipsum       Lorem ipsum        Lorem ipsum Lorem      ipsum </span>
+<span data-ty="" data-ty-delay="0">              dolor sit amet, dolor sit amet,  dolor sit amet, dolor sit  amet, </span>
+<span data-ty="" data-ty-delay="0">              consectetur       consectetur        consectetur consectetur      </span>
+<span data-ty="" data-ty-delay="0">              adipiscing        adipiscing    adipiscing elit. adipiscing elit. </span>
+<span data-ty="" data-ty-delay="0">              elit. Quisque    elit. Quisque  Quisque in metus Quisque in metus </span>
+<span data-ty="" data-ty-delay="0">              in metus sed     in metus sed         sed sapien sed       sapien </span>
+<span data-ty="" data-ty-delay="0">              sapien              sapien             ultricies ultricies        </span>
+<span data-ty="" data-ty-delay="0">              ultricies          ultricies        pretium a at pretium   a   at </span>
+<span data-ty="" data-ty-delay="0">              pretium a at     pretium a at    justo. Maecenas justo.  Maecenas </span>
+<span data-ty="" data-ty-delay="0">              justo. Maecenas justo. Maecenas  luctus velit et luctus velit  et </span>
+<span data-ty="" data-ty-delay="0">              luctus velit et luctus velit et  auctor maximus. auctor maximus.  </span>
+<span data-ty="" data-ty-delay="0">              auctor maximus. auctor maximus.                                   </span>
+<span data-ty="" data-ty-delay="0">                                                                                </span>
+<span data-ty="" data-ty-delay="0">    Asian     🇨🇳  该库支持中文，日文和韩文文本！                                </span>
+<span data-ty="" data-ty-delay="0">   language   🇯🇵                                                                </span>
+<span data-ty="" data-ty-delay="0">   support    ライブラリは中国語、日本語、韓国語のテキストをサポートしています  </span>
+<span data-ty="" data-ty-delay="0">              🇰🇷  이 라이브러리는 중국어, 일본어 및 한국어 텍스트를 지원합니다  </span>
+<span data-ty="" data-ty-delay="0">                                                                                </span>
+<span data-ty="" data-ty-delay="0">    Markup    Rich supports a simple bbcode-like markup for color, style, and   </span>
+<span data-ty="" data-ty-delay="0">              emoji! 👍 🍎 🐜 🐻 🥖 🚌                                          </span>
+<span data-ty="" data-ty-delay="0">                                                                                </span>
+<span data-ty="" data-ty-delay="0">    Tables     Date           Title         Production Budget       Box Office  </span>
+<span data-ty="" data-ty-delay="0">              ───────────────────────────────────────────────────────────────── </span>
+<span data-ty="" data-ty-delay="0">               Dec 20, 2019   Star Wars:         $275,000,000     $375,126,118  </span>
+<span data-ty="" data-ty-delay="0">                              The Rise of                                       </span>
+<span data-ty="" data-ty-delay="0">                              Skywalker                                         </span>
+<span data-ty="" data-ty-delay="0">               May 25, 2018   Solo: A            $275,000,000     $393,151,347  </span>
+<span data-ty="" data-ty-delay="0">                              Star Wars                                         </span>
+<span data-ty="" data-ty-delay="0">                              Story                                             </span>
+<span data-ty="" data-ty-delay="0">               Dec 15, 2017   Star Wars          $262,000,000   $1,332,539,889  </span>
+<span data-ty="" data-ty-delay="0">                              Ep. VIII:                                         </span>
+<span data-ty="" data-ty-delay="0">                              The Last                                          </span>
+<span data-ty="" data-ty-delay="0">                              Jedi                                              </span>
+<span data-ty="" data-ty-delay="0">               May 19, 1999   Star Wars          $115,000,000   $1,027,044,677  </span>
+<span data-ty="" data-ty-delay="0">                              Ep. I: The                                        </span>
+<span data-ty="" data-ty-delay="0">                              phantom                                           </span>
+<span data-ty="" data-ty-delay="0">                              Menace                                            </span>
+<span data-ty="" data-ty-delay="0">                                                                                </span>
+<span data-ty="" data-ty-delay="0">    Syntax       1 def iter_last(values: Itera  {                               </span>
+<span data-ty="" data-ty-delay="0"> highlighting    2 │   """Iterate and generate  │   'foo': [                    </span>
+<span data-ty="" data-ty-delay="0">      &amp;          3 │   iter_values = iter(valu  │   │   3.1427,                 </span>
+<span data-ty="" data-ty-delay="0">    pretty       4 │   try:                     │   │   (                       </span>
+<span data-ty="" data-ty-delay="0">   printing      5 │   │   previous_value = ne  │   │   │   'Paul Atreides',    </span>
+<span data-ty="" data-ty-delay="0">                 6 │   except StopIteration:    │   │   │   'Vladimir           </span>
+<span data-ty="" data-ty-delay="0">                 7 │   │   return               Harkonnen',                     </span>
+<span data-ty="" data-ty-delay="0">                 8 │   for value in iter_value  │   │   │   'Thufir Hawat'      </span>
+<span data-ty="" data-ty-delay="0">                 9 │   │   yield False, previo  │   │   )                       </span>
+<span data-ty="" data-ty-delay="0">                10 │   │   previous_value = va  │   ],                          </span>
+<span data-ty="" data-ty-delay="0">                11 │   yield True, previous_va  │   'atomic': (                 </span>
+<span data-ty="" data-ty-delay="0">                                                │   │   False,                  </span>
+<span data-ty="" data-ty-delay="0">                                                │   │   True,                   </span>
+<span data-ty="" data-ty-delay="0">                                                │   │   None                    </span>
+<span data-ty="" data-ty-delay="0">                                                │   )                           </span>
+<span data-ty="" data-ty-delay="0">                                                }                               </span>
+<span data-ty="" data-ty-delay="0">                                                                                </span>
+<span data-ty="" data-ty-delay="0">   Markdown   # Markdown                        ╔═════════════════════════════╗ </span>
+<span data-ty="" data-ty-delay="0">                                                ║          Markdown           ║ </span>
+<span data-ty="" data-ty-delay="0">              Supports much of the *markdown*   ╚═════════════════════════════╝ </span>
+<span data-ty="" data-ty-delay="0">              __syntax__!                                                       </span>
+<span data-ty="" data-ty-delay="0">                                                Supports much of the markdown   </span>
+<span data-ty="" data-ty-delay="0">              - Headers                         syntax!                         </span>
+<span data-ty="" data-ty-delay="0">              - Basic formatting: **bold**,                                     </span>
+<span data-ty="" data-ty-delay="0">              *italic*, `code`                   • Headers                      </span>
+<span data-ty="" data-ty-delay="0">              - Block quotes                     • Basic formatting: bold,      </span>
+<span data-ty="" data-ty-delay="0">              - Lists, and more...                 italic, code                 </span>
+<span data-ty="" data-ty-delay="0">                                                 • Block quotes                 </span>
+<span data-ty="" data-ty-delay="0">                                                 • Lists, and more...           </span>
+<span data-ty="" data-ty-delay="0">                                                                                </span>
+<span data-ty="" data-ty-delay="0">    +more!    Progress bars, columns, styled logging handler, tracebacks,       </span>
+<span data-ty="" data-ty-delay="0">              etc...                                                            </span>
+<span data-ty="" data-ty-delay="0">                                                                                </span>
+<span data-ty="" data-ty-delay="0">rendered in 86.3ms (cold cache)</span>
+<span data-ty="" data-ty-delay="4">rendered in 36.5ms (warm cache)</span>
+<span data-ty="" data-ty-delay="0">╭──────────────────────── Thanks for trying out Rich! ─────────────────────────╮</span>
+<span data-ty="" data-ty-delay="0">│                                                                              │</span>
+<span data-ty="" data-ty-delay="0">│  We hope you enjoy using         Textualize https://github.com/textualize    │</span>
+<span data-ty="" data-ty-delay="0">│  Rich!                                                                       │</span>
+<span data-ty="" data-ty-delay="0">│                               Buy devs a ☕ https://ko-fi.com/textualize     │</span>
+<span data-ty="" data-ty-delay="0">│  Rich is maintained with ❤                                                   │</span>
+<span data-ty="" data-ty-delay="0">│  by Textualize.io                   Twitter https://twitter.com/willmcgugan  │</span>
+<span data-ty="" data-ty-delay="0">│                                                                              │</span>
+<span data-ty="" data-ty-delay="0">│  - Will McGugan                                                              │</span>
+<span data-ty="" data-ty-delay="0">│                                                                              │</span>
+<span data-ty="" data-ty-delay="15">╰──────────────────────────────────────────────────────────────────────────────╯</span>
 <span data-ty="" data-ty-delay="0"></span>
 </pre></section>
 
@@ -437,7 +534,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
           
-            <a href="echo.html" title="Echo Tests"
+            <a href="cache.html" title="Cache Tests"
                class="md-flex md-footer-nav__link md-footer-nav__link--prev"
                rel="prev">
               <div class="md-flex__cell md-flex__cell--shrink">
@@ -446,17 +543,17 @@
               <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
                 <span class="md-flex__ellipsis">
                   <span
-                      class="md-footer-nav__direction"> Previous </span> Echo Tests </span>
+                      class="md-footer-nav__direction"> Previous </span> Cache Tests </span>
               </div>
             </a>
           
           
-            <a href="../api/modules.html" title="sphinx_terminhtml"
+            <a href="cwd.html" title="CWD Tests"
                class="md-flex md-footer-nav__link md-footer-nav__link--next"
                rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span
                 class="md-flex__ellipsis"> <span
-                class="md-footer-nav__direction"> Next </span> sphinx_terminhtml </span>
+                class="md-footer-nav__direction"> Next </span> CWD Tests </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink"><i
                 class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
