@@ -29,6 +29,7 @@ sys.path.insert(0, os.path.abspath('../..'))
 import conf
 import version as vs
 from sphinx_terminhtml import create_terminhtml_directive_with_setup
+from sphinx_terminhtml.directives.docs import TerminHTMLDocsDirective
 from docsrc.directives.auto_summary import AutoSummaryNameOnly
 
 # -- General configuration ------------------------------------------------
@@ -276,5 +277,6 @@ terminal_prompt_matchers: Final[List[str]] = ["]: ", r"0m: "]
 def setup(app):
     app.connect("autodoc-skip-member", skip)
     app.add_directive('autosummarynameonly', AutoSummaryNameOnly)
+    app.add_directive("terminhtml-docs", TerminHTMLDocsDirective)
     app.add_directive("run-git-terminal",
                       create_terminhtml_directive_with_setup(git_init_commands, terminal_prompt_matchers))

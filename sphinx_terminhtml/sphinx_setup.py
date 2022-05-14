@@ -1,7 +1,7 @@
 from sphinx.application import Sphinx
 
 from sphinx_terminhtml.assets import register_assets
-from sphinx_terminhtml.directives import TerminHTMLDirective
+from sphinx_terminhtml.directives.terminal import TerminHTMLDirective
 from sphinx_terminhtml.get_version import get_sphinx_terminhtml_version
 
 version = get_sphinx_terminhtml_version()
