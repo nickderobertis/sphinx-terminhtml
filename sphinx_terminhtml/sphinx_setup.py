@@ -11,6 +11,7 @@ def setup(app: Sphinx):
     register_assets(app)
     app.add_config_value("terminhtml_cache", True, "html")
     app.add_config_value("terminhtml_echo", False, "html")
+    app.add_config_value("terminhtml_force_color", True, "html")
     app.add_directive("terminhtml", TerminHTMLDirective)
     return {
         "version": version,

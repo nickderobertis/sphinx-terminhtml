@@ -53,6 +53,7 @@ class TerminHTMLDirective(SphinxDirective):
         "cwd-relative-to": _validate_cwd_relative_to,
         "disable-cache": directives.flag,
         "echo": directives.flag,
+        "no-force-color": directives.flag,
     }
     has_content = True
     always_setup_commands: List[str] = []
@@ -152,6 +153,13 @@ class TerminHTMLDirective(SphinxDirective):
         global_echo: bool = self.env.config.terminhtml_echo
         echo_this_terminal: bool = "echo" in self.options
         echo_now = global_echo or echo_this_terminal
+
+        global_force_color: bool = self.env.config.terminhtml_force_color
+        not_force_color_this_terminal: bool = "no-force-color" in self.options
+        if not_force_color_this_terminal:
+            force_color = False
+        else:
+            force_color = global_force_color
         terminhtml = TerminHTML.from_commands(
             self.commands,
             setup_commands,
@@ -160,6 +168,7 @@ class TerminHTMLDirective(SphinxDirective):
             prompt_matchers=prompt_matchers,
             cwd=cwd,
             echo=echo_now,
+            force_color=force_color,
         )
         return terminhtml.to_html(full=False)
 
