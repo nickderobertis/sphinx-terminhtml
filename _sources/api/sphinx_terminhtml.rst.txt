@@ -6,6 +6,13 @@ sphinx\_terminhtml package
    :undoc-members:
    :show-inheritance:
 
+Subpackages
+-----------
+
+.. toctree::
+
+   sphinx_terminhtml.directives
+
 Submodules
 ----------
 
@@ -21,14 +28,6 @@ sphinx\_terminhtml.cache module
 -------------------------------
 
 .. automodule:: sphinx_terminhtml.cache
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-sphinx\_terminhtml.directives module
-------------------------------------
-
-.. automodule:: sphinx_terminhtml.directives
    :members:
    :undoc-members:
    :show-inheritance:

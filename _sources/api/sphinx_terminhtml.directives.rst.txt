@@ -1,0 +1,27 @@
+sphinx\_terminhtml.directives package
+=====================================
+
+.. automodule:: sphinx_terminhtml.directives
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+sphinx\_terminhtml.directives.docs module
+-----------------------------------------
+
+.. automodule:: sphinx_terminhtml.directives.docs
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+sphinx\_terminhtml.directives.terminal module
+---------------------------------------------
+
+.. automodule:: sphinx_terminhtml.directives.terminal
+   :members:
+   :undoc-members:
+   :show-inheritance:
+

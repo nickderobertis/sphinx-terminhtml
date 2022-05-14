@@ -5,12 +5,11 @@
 
 # Welcome to Sphinx TerminHTML documentation!
 
-```{terminhtml}
+```{terminhtml-docs}
 ---
 prompt-matchers: "['\\[0m: ']"
 input: "Nick DeRobertis"
 cwd: ..
-echo:
 ---
 python -m terminhtml.demo_output
 ```
@@ -18,7 +17,7 @@ python -m terminhtml.demo_output
 ```{include} ../../README.md
 ```
 
-```{terminhtml}
+```{terminhtml-docs}
 python -m rich
 ```
 
